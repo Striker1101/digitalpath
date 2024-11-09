@@ -69046,7 +69046,7 @@ const ya = {
     }),
   UK = () =>
     I.jsx("div", {
-      className: "w-full h-screen bg-[url('/images/DM_banner.png')] bg-cover",
+      className: "w-full h-screen bg-[url('')] bg-cover",
       children: I.jsxs(Wt.div, {
         className:
           "pt-32 md:pt-44 m-auto md:mx-20 w-full md:w-3/5 h-auto flex flex-col items-start",
