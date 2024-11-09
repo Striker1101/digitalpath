@@ -1,15 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import bg1 from "../../Assets/images/bg1.jpg";
 import bg6 from "../../Assets/images/bg6.jpg";
 import bg2 from "../../Assets/images/bg2.jpg";
 export default function Welcome() {
+  const images = [bg1, bg6, bg2]; // Array of image sources
+  const [currentImage, setCurrentImage] = useState(images[0]); // Initial image
+
+  useEffect(() => {
+    // Function to select a random image from the array
+    const changeImage = () => {
+      const randomImage = images[Math.floor(Math.random() * images.length)];
+      setCurrentImage(randomImage);
+    };
+
+    // Set an interval to change the image every 2 seconds
+    const interval = setInterval(changeImage, 2000);
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
+  }, []); // Empty dependency array to run once on mount
+
   return (
     <div class="w-full bg-white pt-20">
       <div class="relative h-[100vh] w-full overflow-hidden">
         <div
           class="absolute inset-0 transition-opacity duration-1000 ease-in-out back opacity-100"
           style={{
-            backgroundImage: `url(${bg1})`,
+            backgroundImage: `url(${currentImage})`,
             backgroundPosition: " center center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -18,7 +35,7 @@ export default function Welcome() {
         <div
           class="absolute inset-0 transition-opacity duration-1000 ease-in-out back opacity-0"
           style={{
-            backgroundImage: `url(${bg6})`,
+            backgroundImage: `url(${currentImage})`,
             backgroundPosition: "center center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -27,7 +44,7 @@ export default function Welcome() {
         <div
           class="absolute inset-0 transition-opacity duration-1000 ease-in-out back opacity-0"
           style={{
-            backgroundImage: `url(${bg2})`,
+            backgroundImage: `url(${currentImage})`,
             backgroundPosition: "center center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",

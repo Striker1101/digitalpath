@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../Assets/images/logo.png";
-
+import { Link } from "react-router-dom";
 export default function Navigation() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -18,26 +18,46 @@ export default function Navigation() {
         {/* Main menu for large screens */}
         <div className="ml-auto hidden md:flex flex-row justify-center items-center space-x-4">
           {[
-            "Home",
-            "Our Services",
-            "Portfolio",
-            "Digital Marketing",
-            "Web Development",
-            "Why Choose Us",
-            "About Us",
-            "Contact Us",
+            {
+              name: "Home",
+              link: "/",
+            },
+            {
+              name: "Our Services",
+              link: "/#services",
+            },
+            {
+              name: "Portfolio",
+              link: "/portfolio",
+            },
+            {
+              name: "Digital Marketing",
+              link: "/digital_Marketing",
+            },
+            {
+              name: "Web Development",
+              link: "/web_development",
+            },
+            {
+              name: "Why Choose Us",
+              link: "/why_choose_us",
+            },
+            {
+              name: "About Us",
+              link: "/about_us",
+            },
+            {
+              name: "Contact Us",
+              link: "/contact_us",
+            },
           ].map((item, index) => (
-            <a
+            <Link
+              to={item.link}
               key={index}
-              href={
-                item === "Home"
-                  ? "/"
-                  : `/#${item.toLowerCase().replace(" ", "-")}`
-              }
               className="text-[16px] px-3 text-[#381d0d] hover:text-primary font-Poppins hover:font-bold cursor-pointer"
             >
-              {item}
-            </a>
+              {item.name}
+            </Link>
           ))}
         </div>
 

@@ -7,6 +7,7 @@ import BlogPosts from "./BlogPosts";
 import Portfolio from "./Portfolio";
 import Testimony from "./Testimony";
 import ContactUs from "./ContactUs";
+import Stacks from "./Stacks";
 export default function Homepage() {
   return (
     <div>
@@ -17,6 +18,7 @@ export default function Homepage() {
       <BlogPosts />
       <Portfolio />
       <Testimony />
+      <Stacks />
       <ContactUs />
     </div>
   );
