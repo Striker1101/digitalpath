@@ -4,6 +4,7 @@ import service2 from "../../Assets/images/Services/2.jpg";
 import service3 from "../../Assets/images/Services/3.jpg";
 import service4 from "../../Assets/images/Services/4.jpg";
 import service5 from "../../Assets/images/Services/5.jpg";
+import endless_constellation from "../../Assets/images/endless-constellation.svg";
 const services = [
   { id: 1, title: "Request Service", image: service1 },
   { id: 2, title: "Request Service", image: service2 },
@@ -15,7 +16,12 @@ const services = [
 export default function Service() {
   return (
     <div id="services" className="bg-white py-10 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/images/endless-constellation.svg')] bg-repeat animate-scroll"></div>
+      <div
+        className="absolute inset-0 bg-repeat animate-scroll"
+        style={{
+          backgroundImage: `url(${endless_constellation})`,
+        }}
+      ></div>
       <div className="relative w-full h-auto px-4 py-2 mx-auto z-10">
         <h2 className="text-5xl text-[#412001] font-Poppins text-center my-8">
           Our Services

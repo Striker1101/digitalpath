@@ -32,23 +32,23 @@ export default function Navigation() {
             },
             {
               name: "Digital Marketing",
-              link: "/digital_Marketing",
+              link: "/digital-marketing",
             },
             {
               name: "Web Development",
-              link: "/web_development",
+              link: "/web-development",
             },
             {
               name: "Why Choose Us",
-              link: "/why_choose_us",
+              link: "/#why-choose-us",
             },
             {
               name: "About Us",
-              link: "/about_us",
+              link: "/about-us",
             },
             {
               name: "Contact Us",
-              link: "/contact_us",
+              link: "/contact-us",
             },
           ].map((item, index) => (
             <Link
