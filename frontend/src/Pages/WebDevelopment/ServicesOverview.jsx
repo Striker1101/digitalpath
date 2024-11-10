@@ -5,25 +5,25 @@ import Header from "../../Components/Header";
 const services = [
   {
     name: "API Development and Integration",
-    link: "api-development-integration",
+    link: "api_development_integration",
   },
-  { name: "Software Development", link: "software-development" },
-  { name: "Web & Mobile App Development", link: "web-mobile-app-development" },
+  { name: "Software Development", link: "software_development" },
+  { name: "Web & Mobile App Development", link: "web_mobile_app_development" },
   {
     name: "Business Website Development",
-    link: "business-website-development",
+    link: "business_website_improvement",
   },
-  { name: "Website UI/UX Design & Development", link: "website-ui-ux-design" },
-  { name: "SEO Improvement", link: "seo-improvement" },
-  { name: "Maintenance and Support", link: "maintenance-support" },
-  { name: "CMS Website Development", link: "cms-website-development" },
+  { name: "Website UI/UX Design & Development", link: "website_ui_ux_design" },
+  { name: "SEO Improvement", link: "seo_improvement" },
+  { name: "Maintenance and Support", link: "maintenance_support" },
+  { name: "CMS Website Development", link: "cms_website_development" },
   {
     name: "E-commerce Website Development",
-    link: "ecommerce-website-development",
+    link: "e-commerce_website_development",
   },
   {
     name: "Blogging Website Development",
-    link: "blogging-website-development",
+    link: "blogging_website_development",
   },
 ];
 

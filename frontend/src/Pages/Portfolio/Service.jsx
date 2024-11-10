@@ -5,15 +5,16 @@ import service3 from "../../Assets/images/Services/3.jpg";
 import service4 from "../../Assets/images/Services/4.jpg";
 import service5 from "../../Assets/images/Services/5.jpg";
 import endless_constellation from "../../Assets/images/endless-constellation.svg";
+import { Link } from "react-router-dom";
 const services = [
-  { id: 1, title: "Request Service", image: service1 },
-  { id: 2, title: "Request Service", image: service2 },
-  { id: 3, title: "Request Service", image: service3 },
-  { id: 4, title: "Request Service", image: service4 },
-  { id: 5, title: "Request Service", image: service5 },
+  { id: 1, image: service1, path: "maintenance_and_seo_improvement" },
+  { id: 2, image: service2, path: "business_website_improvement" },
+  { id: 3, image: service3, path: "cms_website_improvement" },
+  { id: 4, image: service4, path: "e_commerce_website_improvement" },
+  { id: 5, image: service5, path: "other_web_service" },
 ];
 
-export default function Service() {
+export default function Service({ projects }) {
   return (
     <div id="services" className="bg-white py-10 relative overflow-hidden">
       <div
@@ -37,9 +38,12 @@ export default function Service() {
                 alt=""
                 className="w-full h-[200px] object-cover rounded-t"
               />
-              <h4 className="my-auto mr-auto ml-3 p-2 text-sm text-blue-100 font-Poppins bg-black hover:bg-[#412001] rounded cursor-pointer">
-                {service.title}
-              </h4>
+              <Link
+                to={`/contact-us?purpose=${service.path}`} // Pass the service.path as a query parameter
+                className="my-auto mr-auto ml-3 p-2 text-sm text-blue-100 font-Poppins bg-black hover:bg-[#412001] rounded cursor-pointer"
+              >
+                <h4>Request Service</h4>
+              </Link>
             </div>
           ))}
         </div>

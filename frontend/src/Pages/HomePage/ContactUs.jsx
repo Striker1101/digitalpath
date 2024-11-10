@@ -2,10 +2,16 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Header from "../../Components/Header";
-
+import { useLocation } from "react-router-dom";
 export default function ContactUs() {
+  const location = useLocation();
+
+  // Get the 'purpose' query parameter from the URL
+  const queryParams = new URLSearchParams(location.search);
+  const purposeFromQuery = queryParams.get("purpose");
+
   const [formData, setFormData] = useState({
-    purpose: "",
+    purpose: purposeFromQuery || "",
     name: "",
     email: "",
     phone: "",
@@ -57,8 +63,25 @@ export default function ContactUs() {
     }
   };
 
+  const services = [
+    {
+      path: "maintenance_and_seo_improvement",
+      name: "Maintenance And SEO Improvement",
+    },
+    {
+      path: "business_website_improvement",
+      name: "Business Website Improvement",
+    },
+    { path: "cms_website_improvement", name: "CMS Website Improvement" },
+    {
+      path: "e_commerce_website_improvement",
+      name: "E-Commerce Website Improvement",
+    },
+    { path: "other_web_service", name: "Other Web Service" },
+  ];
+
   return (
-    <>
+    <div className="py-20">
       <Header
         title="Get in Touch"
         lineColor="navy"
@@ -102,10 +125,13 @@ export default function ContactUs() {
               required
             >
               <option value="">Select...</option>
-              <option value="web-development">Web Development</option>
-              <option value="digital-marketing">Digital Marketing</option>
-              <option value="both">Both</option>
-              <option value="not-sure">Not Sure</option>
+              {services.map((service, i) => {
+                return (
+                  <option key={i} value={service.path}>
+                    {service.name}
+                  </option>
+                );
+              })}
             </select>
           </div>
           <div className="mb-4">
@@ -191,6 +217,6 @@ export default function ContactUs() {
           </div>
         </form>
       </div>
-    </>
+    </div>
   );
 }
