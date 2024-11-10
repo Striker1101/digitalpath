@@ -13,6 +13,8 @@ const upload = require("../config/multerConfig");
 // Add the /is_logged route before the /:id route
 router.get("/is_logged", isAuth, Controller.isLoggedIn);
 
+router.post("/contact_us", Controller.contact_us);
+
 // Get all users
 router.get("/", Controller.get);
 

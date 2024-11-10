@@ -1,6 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function ContactUs() {
+  const [formData, setFormData] = useState({
+    purpose: "",
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+    terms: false,
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  // Handle change for form fields
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setSuccessMessage("");
+    setErrorMessage("");
+
+    try {
+      const response = await axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/users/contact_us`,
+        formData
+      );
+      setLoading(false);
+      setSuccessMessage("Your message has been sent successfully!");
+      setFormData({
+        purpose: "",
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+        terms: false,
+      });
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+      setErrorMessage(
+        "There was an error sending your message. Please try again."
+      );
+    }
+  };
+
   return (
     <div
       id="contact"
@@ -22,11 +77,17 @@ export default function ContactUs() {
         </svg>
         Contact Us on WhatsApp
       </button>
-      <form>
+      {successMessage && (
+        <div className="text-green-500 mb-4">{successMessage}</div>
+      )}
+      {errorMessage && <div className="text-red-500 mb-4">{errorMessage}</div>}
+      <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label className="block text-gray-700">Purpose</label>
           <select
             name="purpose"
+            value={formData.purpose}
+            onChange={handleChange}
             className="border rounded w-full py-2 px-3 text-gray-700"
             required
           >
@@ -42,6 +103,8 @@ export default function ContactUs() {
           <input
             type="text"
             name="name"
+            value={formData.name}
+            onChange={handleChange}
             required
             className="border rounded w-full py-2 px-3 text-gray-700"
           />
@@ -51,6 +114,8 @@ export default function ContactUs() {
           <input
             type="email"
             name="email"
+            value={formData.email}
+            onChange={handleChange}
             required
             className="border rounded w-full py-2 px-3 text-gray-700"
           />
@@ -60,6 +125,8 @@ export default function ContactUs() {
           <input
             type="tel"
             name="phone"
+            value={formData.phone}
+            onChange={handleChange}
             required
             className="border rounded w-full py-2 px-3 text-gray-700"
           />
@@ -68,22 +135,49 @@ export default function ContactUs() {
           <label className="block text-gray-700">Message</label>
           <textarea
             name="message"
+            value={formData.message}
+            onChange={handleChange}
             required
             className="border rounded w-full py-2 px-3 text-gray-700"
           ></textarea>
         </div>
         <div className="mb-4 flex items-center">
-          <input type="checkbox" id="terms" required className="mr-2" />
+          <input
+            type="checkbox"
+            name="terms"
+            checked={formData.terms}
+            onChange={handleChange}
+            id="terms"
+            required
+            className="mr-2"
+          />
           <label htmlFor="terms" className="text-gray-700">
-            I read and accept the Terms &amp; Conditions and Privacy Policy.
+            I read and accept the{" "}
+            <Link
+              to="/terms"
+              className="underline text-blue-500 hover:text-blue-700"
+            >
+              Terms & Conditions
+            </Link>{" "}
+            and
+            <Link
+              to="/privacy-policy"
+              className="underline text-blue-500 hover:text-blue-700"
+            >
+              Privacy Policy
+            </Link>
+            .
           </label>
         </div>
-        <button
-          type="submit"
-          className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
-        >
-          Submit
-        </button>
+        <div className="mb-4">
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full py-2 px-4 bg-green-500 text-white rounded hover:bg-green-700"
+          >
+            {loading ? "Sending..." : "Send Message"}
+          </button>
+        </div>
       </form>
     </div>
   );

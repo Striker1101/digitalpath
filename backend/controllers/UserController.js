@@ -1,6 +1,6 @@
 const User = require("../database/models/User"); // Import the User model
 const Location = require("../database/models/Location");
-
+const transportMail = require("../config/nodemailer");
 //get all users
 exports.get = async (req, res) => {
   try {
@@ -138,5 +138,47 @@ exports.isLoggedIn = async (req, res) => {
   } catch (error) {
     console.error(error);
     return res.status(500).json({ msg: "Server error", status: false });
+  }
+};
+
+exports.contact_us = async (req, res) => {
+  const { name, email, message, phone, purpose } = req.body;
+
+  // Validate form data
+  if (!name || !email || !message) {
+    return res.status(400).json({
+      message: "All fields (name, email, message) are required.",
+    });
+  }
+
+  // Configure email options
+  const mailOptions = {
+    from: email, // Sender's email (user's email)
+    to: process.env.ADMIN_EMAIL, // Admin's email address
+    subject: `Contact Us Form Submission from ${name}`, // Dynamic subject line
+    html: `
+      <h3>You have a new message from ${name} for purpose ${purpose}</h3>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone Number:</strong> ${phone}</p>
+      <p><strong>Message:</strong></p>
+      <p>${message}</p>
+    `, // HTML email content
+  };
+
+  try {
+    // Send the email to the admin
+    const info = await transportMail.sendMail(mailOptions);
+
+    // Respond with success message
+    res.status(200).json({
+      msg: "Your message has been sent successfully.",
+      info: info.response,
+    });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    res.status(500).json({
+      msg: "There was an error sending your message. Please try again.",
+      error,
+    });
   }
 };
