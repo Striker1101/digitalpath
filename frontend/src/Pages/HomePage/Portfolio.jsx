@@ -51,7 +51,7 @@ export default function Portfolio() {
         <Swiper
           modules={[Autoplay, Pagination]}
           spaceBetween={30}
-          slidesPerView={1}
+          slidesPerView={2}
           pagination={{ clickable: true }}
           autoplay={{ delay: 2500, disableOnInteraction: false }}
           loop={true}

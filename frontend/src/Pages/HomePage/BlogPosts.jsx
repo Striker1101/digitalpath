@@ -50,14 +50,17 @@ export default function BlogPosts() {
           Latest Blogs
         </h2>
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-          spaceBetween={50}
-          slidesPerView={3}
-          navigation
+          modules={[Pagination, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={1} // Default to 1 slide on smaller screens
           autoplay
           pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
           loop
+          breakpoints={{
+            640: { slidesPerView: 1 }, // 1 slide on screens >= 640px
+            768: { slidesPerView: 2 }, // 2 slides on screens >= 768px
+            1024: { slidesPerView: 3 }, // 3 slides on screens >= 1024px
+          }}
           className="cursor-pointer"
         >
           {blogPosts.map((post, index) => (

@@ -2,6 +2,14 @@ import React, { useEffect, useState } from "react";
 import bg1 from "../../Assets/images/bg1.jpg";
 import bg2 from "../../Assets/images/bg_a.png";
 import bg3 from "../../Assets/images/liquid-cheese.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCode,
+  faWrench,
+  faShoppingCart,
+  faServer,
+  faBolt,
+} from "@fortawesome/free-solid-svg-icons";
 
 function ServiceCard({ title, icon, link }) {
   return (
@@ -37,6 +45,14 @@ export default function Service() {
     // Cleanup interval on component unmount
     return () => clearInterval(interval);
   }, []); // Empty dependency array to run once on mount
+
+  const services = [
+    { title: "Maintenance and SEO Improvement", icon: faWrench },
+    { title: "Business Website Development", icon: faCode },
+    { title: "CMS Website Development", icon: faServer },
+    { title: "E-commerce Website Development", icon: faShoppingCart },
+    // { title: "Other Web Services", icon: faBolt },
+  ];
   return (
     <section id="our-services">
       <div id="services" className="bg-white">
@@ -44,7 +60,7 @@ export default function Service() {
           <h2 className="text-4xl text-primary font-Poppins text-center my-12">
             Our Services
           </h2>
-          <div className="relative flex mx-auto w-full h-[600px]">
+          <div className="relative flex mx-auto w-full h-[700px]">
             <img
               src={currentImage}
               alt="Background "
@@ -55,29 +71,26 @@ export default function Service() {
                 Web Development Services
               </h3>
               <h3 className="text-xl md:text-3xl font-Raleway text-white text-center my-10">
-                We provide our Client with cutting edge web and software
+                We provide our clients with cutting-edge web and software
                 solutions
               </h3>
-              <div className="w-full md:w-10/12 h-auto grid grid-cols-2 items-center">
-                {/* Map over a list of service items here */}
-                {[
-                  "Maintenance and SEO Improvement",
-                  "Business Website Development",
-                  "CMS Website Development",
-                  "E-commerce Website Development",
-                  "Other Web Services",
-                ].map((service, index) => (
-                  <p
+              <div className="w-full md:w-10/12 h-auto grid grid-cols-2 gap-6 items-center">
+                {services.map((service, index) => (
+                  <div
                     key={index}
-                    className="mx-auto py-3 text-sm md:text-xl text-center text-white font-Roboto"
+                    className="flex flex-col items-center text-center text-white font-Roboto mx-auto py-3 transition transform hover:scale-105 duration-300"
                   >
-                    {service}
-                  </p>
+                    <FontAwesomeIcon
+                      icon={service.icon}
+                      className="text-4xl md:text-5xl text-primary animate-bounce mb-4"
+                    />
+                    <p className="text-sm md:text-xl">{service.title}</p>
+                  </div>
                 ))}
               </div>
-              <h3 className="text-xl font-Raleway text-white hover:bg-white hover:text-black text-center my-10 p-3 px-6 border border-white rounded cursor-pointer">
+              <button className="text-xl font-Raleway text-white hover:bg-white hover:text-black text-center my-10 p-3 px-6 border border-white rounded-full cursor-pointer transition duration-300 transform hover:scale-105">
                 Learn More
-              </h3>
+              </button>
             </div>
           </div>
 
