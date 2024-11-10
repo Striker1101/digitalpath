@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import CounterComponent from "../../Components/CounterComponent";
+import Header from "../../Components/Header";
 
 const testimonyData = [
   {
@@ -25,6 +26,11 @@ const testimonyData = [
 export default function Testimony() {
   return (
     <div className="py-8 bg-white">
+      <Header
+        title="Client Testimonials"
+        lineColor="teal"
+        description="Hear from our satisfied clients and learn how our services have made a difference in their business journeys."
+      />
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl text-primary font-bold text-center mb-6">
           What Our Clients Say
