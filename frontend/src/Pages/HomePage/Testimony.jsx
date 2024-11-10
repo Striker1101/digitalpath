@@ -1,26 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import CountUp from "react-countup"; // Import CountUp
-import { useCountUp } from "react-countup";
 import CounterComponent from "../../Components/CounterComponent";
 
 const testimonyData = [
   {
     quote: "This company transformed my online presence! Highly recommended!",
-    name: "John Doe",
-    company: "Doe Enterprises",
+    name: "Chinedu Okeke",
+    company: "Okeke Ventures",
   },
   {
     quote:
       "Outstanding service and fantastic results. They know what they're doing!",
-    name: "Jane Smith",
-    company: "Smith Co.",
+    name: "Amina Ibrahim",
+    company: "Ibrahim & Sons",
   },
   {
     quote: "Professional and reliable. My business has never been better.",
-    name: "Alice Johnson",
-    company: "Johnson LLC",
+    name: "Funmi Adebayo",
+    company: "Adebayo Enterprises",
   },
 ];
 

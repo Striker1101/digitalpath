@@ -6,6 +6,7 @@ import linkinedin from "../Assets/images/linkedin-svgrepo-com.svg";
 import x from "../Assets/images/x-social-media-logo-icon.svg";
 import tictok from "../Assets/images/tiktok-svgrepo-com.svg";
 import logo from "../Assets/images/logo.png";
+import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="relative w-full py-12 bg-white">
@@ -26,21 +27,21 @@ export default function Footer() {
           {/* Navigation Links */}
           <div className="grid grid-cols-3 gap-y-2 mt-10">
             {[
-              "Home",
-              "Our Services",
-              "Why Choose Us",
-              "Portfolio",
-              "Digital Marketing",
-              "About Us",
-              "Contact Us",
-            ].map((link, index) => (
-              <a
+              { name: "Home", link: "/" },
+              { name: "Our Services", link: "/#services" },
+              { name: "Why Choose Us", link: "/#why-choose-us" },
+              { name: "Portfolio", link: "/portfolio" },
+              { name: "Digital Marketing", link: "/digital-marketing" },
+              { name: "About Us", link: "/about-us" },
+              { name: "Contact Us", link: "/contact-us" },
+            ].map((item, index) => (
+              <Link
                 key={index}
-                href={`/${link.replace(/\s+/g, "-").toLowerCase()}`}
+                to={item.link}
                 className="font-medium text-black hover:text-primary text-sm md:text-md"
               >
-                {link}
-              </a>
+                {item.name}
+              </Link>
             ))}
           </div>
         </div>
