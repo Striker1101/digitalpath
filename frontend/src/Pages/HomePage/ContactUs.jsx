@@ -164,6 +164,7 @@ export default function ContactUs() {
               to="/privacy-policy"
               className="underline text-blue-500 hover:text-blue-700"
             >
+              {" "}
               Privacy Policy
             </Link>
             .

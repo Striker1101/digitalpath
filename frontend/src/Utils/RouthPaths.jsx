@@ -6,6 +6,8 @@ import DigitalMarketing from "../Pages/DigitalMarketing";
 import WebDevelopment from "../Pages/WebDevelopment";
 import AboutUs from "../Pages/About";
 import ContactUs from "../Pages/Contact";
+import Terms from "../Pages/TermsAndPrivacy/Terms";
+import Privacy from "../Pages/TermsAndPrivacy/Privacy";
 export default function RouthPaths() {
   return (
     <Routes>
@@ -15,6 +17,8 @@ export default function RouthPaths() {
       <Route path="/web-development" element={<WebDevelopment />} />
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/contact-us" element={<ContactUs />} />
+      <Route path="/terms" element={<Terms />} />
+      <Route path="/privacy-policy" element={<Privacy />} />
     </Routes>
   );
 }
