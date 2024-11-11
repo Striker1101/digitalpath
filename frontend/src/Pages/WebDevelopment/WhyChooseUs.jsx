@@ -53,14 +53,11 @@ export default function WhyChooseUs() {
         description="Our commitment to quality, innovation, and client satisfaction sets us apart in delivering exceptional digital solutions."
       />
 
-      <section className="p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-        <h2 className="col-span-full text-3xl font-bold text-center mb-6">
-          Why Choose Us
-        </h2>
+      <section className="p-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
         {reasons.map((reason, index) => (
           <div
             key={index}
-            className="reason-card flex items-start bg-gray-50 p-6 rounded-lg shadow-md hover:bg-gray-100 transition duration-200 w-100"
+            className="reason-card flex items-start bg-gray-50 p-2 rounded-lg shadow-md hover:bg-gray-100 transition duration-200 w-100"
           >
             {/* Icon or numbered badge */}
             <div className="mr-4 flex-shrink-0">

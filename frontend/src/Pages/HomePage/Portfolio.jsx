@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import jericho_hospital from "../../Assets/images/jericho-hospital.png";
@@ -7,40 +7,10 @@ import ninimi_restaurant from "../../Assets/images/ninimi-restaurant.png";
 import cas_automobile_workshop from "../../Assets/images/cas-automobile-workshop.png";
 import queen_catering_events from "../../Assets/images/queen-catering-events.png";
 import cisco_autos from "../../Assets/images/cisco-autos.png";
+import { DataContext } from "../../store";
 
 export default function Portfolio() {
-  const projects = [
-    {
-      title: "Jericho Hospital",
-      link: "https://jericho-hospital.netlify.app/",
-      image: jericho_hospital,
-    },
-    {
-      title: "Tara Grill Groove",
-      link: "https://tara-grill-groove.netlify.app/",
-      image: tara_grill_groove,
-    },
-    {
-      title: "Ninimi Restaurant",
-      link: "https://ninimi-restaurant.netlify.app/",
-      image: ninimi_restaurant,
-    },
-    {
-      title: "CAS Automobile Workshop",
-      link: "https://cas-automobile-workshop.netlify.app/",
-      image: cas_automobile_workshop,
-    },
-    {
-      title: "Queen Catering Events",
-      link: "https://queen-catering-events.netlify.app/",
-      image: queen_catering_events,
-    },
-    {
-      title: "Cisco Autos",
-      link: "https://cisco-1.netlify.app/",
-      image: cisco_autos,
-    },
-  ];
+  const { projects } = useContext(DataContext);
 
   return (
     <div id="portfolio" className="flex py-8 bg-gray-100">
@@ -74,10 +44,10 @@ export default function Portfolio() {
                   {project.title}
                 </h3>
                 <a
-                  href="/portfolio"
+                  href={project.link}
                   className="mt-2 px-4 py-1 bg-yellow-600 text-white rounded hover:bg-yellow-500 transition text-center w-full block"
                 >
-                  More
+                  See More
                 </a>
               </a>
             </SwiperSlide>

@@ -36,8 +36,8 @@ export default function HeroSection() {
               className="h-full w-full bg-cover bg-center"
               style={{
                 backgroundImage: `url(${image})`,
-                opacity: "0.3",
-                visibility: "0.5",
+                opacity: "0.09",
+                visibility: "0.1",
               }}
             ></div>
           </SwiperSlide>
@@ -51,13 +51,19 @@ export default function HeroSection() {
       <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-4">
         <h1 className="text-5xl font-bold">Elevate Your Online Presence</h1>
         <p className="text-xl">Transforming Your Ideas into Digital Reality</p>
-        <div className="space-x-4 mt-4">
-          <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 my-3 rounded">
+        <div className="space-x-4 mt-4 flex flex-wrap align-middle justify-center">
+          <Link
+            to={"/web-development/#contact"}
+            className="px-4 my-2 py-4 bg-primary hover:bg-opacity-90 transition-all font-bold text-[#f1f1f1] rounded mr-4"
+          >
             Explore Our Services
-          </button>
-          <button className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded">
-            <Link to={"/web-development/#contact"}>Contact Us on WhatsApp</Link>
-          </button>
+          </Link>
+          <Link
+            href=""
+            className="px-6 py-4 border border-white hover:bg-white hover:text-black transition-all rounded-md"
+          >
+            Contact Us on WhatsApp
+          </Link>
         </div>
       </div>
     </section>

@@ -20,7 +20,7 @@ export default function Footer() {
               className="w-20 h-20 object-cover"
             />
             <p className="px-2 text-3xl font-Raleway text-[#241508] font-bold">
-              Digital Experts
+              DigitalPath
             </p>
           </div>
 
@@ -54,7 +54,7 @@ export default function Footer() {
               href="https://material-tailwind.com/"
               className="font-semibold text-primary"
             >
-              Digital Experts
+              DigitalPath
             </a>
             . All Rights Reserved.
           </p>
@@ -101,7 +101,7 @@ export default function Footer() {
               aria-label="tictok"
               className="block antialiased font-sans text-base font-light leading-relaxed text-inherit opacity-80 transition-opacity hover:opacity-100"
             >
-              <img src={tictok} alt="" class="w-10 h-10 object-cover" />
+              <img src={tictok} alt="" className="w-10 h-10 object-cover" />
             </a>
           </div>
         </div>

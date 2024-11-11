@@ -7,6 +7,40 @@ export default function Navigation() {
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
   const closeSidebar = () => setIsSidebarOpen(false);
 
+  const links = [
+    {
+      name: "Home",
+      link: "/",
+    },
+    {
+      name: "Our Services",
+      link: "/#services",
+    },
+    {
+      name: "Portfolio",
+      link: "/portfolio",
+    },
+    {
+      name: "Digital Marketing",
+      link: "/digital-marketing",
+    },
+    {
+      name: "Web Development",
+      link: "/web-development",
+    },
+    {
+      name: "Why Choose Us",
+      link: "/#why-choose-us",
+    },
+    {
+      name: "About Us",
+      link: "/about-us",
+    },
+    {
+      name: "Contact Us",
+      link: "/contact-us",
+    },
+  ];
   return (
     <>
       {/* Navbar */}
@@ -17,40 +51,7 @@ export default function Navigation() {
 
         {/* Main menu for large screens */}
         <div className="ml-auto hidden md:flex flex-row justify-center items-center space-x-4">
-          {[
-            {
-              name: "Home",
-              link: "/",
-            },
-            {
-              name: "Our Services",
-              link: "/#services",
-            },
-            {
-              name: "Portfolio",
-              link: "/portfolio",
-            },
-            {
-              name: "Digital Marketing",
-              link: "/digital-marketing",
-            },
-            {
-              name: "Web Development",
-              link: "/web-development",
-            },
-            {
-              name: "Why Choose Us",
-              link: "/#why-choose-us",
-            },
-            {
-              name: "About Us",
-              link: "/about-us",
-            },
-            {
-              name: "Contact Us",
-              link: "/contact-us",
-            },
-          ].map((item, index) => (
+          {links.map((item, index) => (
             <Link
               to={item.link}
               key={index}
@@ -114,28 +115,15 @@ export default function Navigation() {
 
         {/* Sidebar links */}
         <div className="flex flex-col space-y-4 p-4">
-          {[
-            "Home",
-            "Our Services",
-            "Portfolio",
-            "Digital Marketing",
-            "Web Development",
-            "Why Choose Us",
-            "About Us",
-            "Contact Us",
-          ].map((item, index) => (
-            <a
+          {links.map((item, index) => (
+            <Link
               key={index}
-              href={
-                item === "Home"
-                  ? "/"
-                  : `/#${item.toLowerCase().replace(" ", "-")}`
-              }
+              to={item.link}
               onClick={closeSidebar}
               className="text-[#381d0d] text-[16px] hover:text-primary font-Poppins"
             >
-              {item}
-            </a>
+              {item.name}
+            </Link>
           ))}
         </div>
       </div>

@@ -81,7 +81,7 @@ export default function ContactUs() {
   ];
 
   return (
-    <div className="py-20">
+    <div>
       <Header
         title="Get in Touch"
         lineColor="navy"
@@ -90,7 +90,7 @@ export default function ContactUs() {
 
       <div
         id="contact"
-        className="w-full md:w-[500px] py-20 mx-auto p-6 bg-white shadow-md rounded-lg"
+        className="w-full md:w-[500px] mx-auto p-6 bg-white shadow-md rounded-lg"
       >
         <h2 className="text-2xl font-bold mb-4 text-center">Contact Us</h2>
         <button className="bg-green-500 text-white py-2 px-4 rounded-full mb-4 flex items-center justify-center mx-auto">

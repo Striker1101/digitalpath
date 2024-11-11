@@ -21,10 +21,10 @@ export default function Welcome() {
   }, []); // Empty dependency array to run once on mount
 
   return (
-    <div class="w-full bg-white pt-20">
-      <div class="relative h-[100vh] w-full overflow-hidden">
+    <div className="w-full bg-white pt-20">
+      <div className="relative h-[100vh] w-full overflow-hidden">
         <div
-          class="absolute inset-0 transition-opacity duration-1000 ease-in-out back opacity-100"
+          className="absolute inset-0 transition-opacity duration-1000 ease-in-out back opacity-100"
           style={{
             backgroundImage: `url(${currentImage})`,
             backgroundPosition: " center center",
@@ -33,7 +33,7 @@ export default function Welcome() {
           }}
         ></div>
         <div
-          class="absolute inset-0 transition-opacity duration-1000 ease-in-out back opacity-0"
+          className="absolute inset-0 transition-opacity duration-1000 ease-in-out back opacity-0"
           style={{
             backgroundImage: `url(${currentImage})`,
             backgroundPosition: "center center",
@@ -42,7 +42,7 @@ export default function Welcome() {
           }}
         ></div>
         <div
-          class="absolute inset-0 transition-opacity duration-1000 ease-in-out back opacity-0"
+          className="absolute inset-0 transition-opacity duration-1000 ease-in-out back opacity-0"
           style={{
             backgroundImage: `url(${currentImage})`,
             backgroundPosition: "center center",
@@ -50,37 +50,37 @@ export default function Welcome() {
             backgroundRepeat: "no-repeat",
           }}
         ></div>
-        <div class="absolute inset-0 bg-[#1f1d1da6] flex flex-col items-center text-white">
+        <div className="absolute inset-0 bg-[#1f1d1da6] flex flex-col items-center text-white">
           <div
-            class="mx-auto mt-44 w-11/12 md:w-[900px] h-auto flex flex-col items-center"
+            className="mx-auto mt-44 w-11/12 md:w-[900px] h-auto flex flex-col items-center"
             style={{ opacity: "1", transform: "none" }}
           >
             <h1
-              class="text-3xl md:text-6xl text-center font-Roboto font-bold"
+              className="text-3xl md:text-6xl text-center font-Roboto font-bold"
               style={{ opacity: "1", transform: "none" }}
             >
               Elevate Your Online Presence
             </h1>
             <p
-              class="text-lg md:text-2xl text-center mt-4"
+              className="text-lg md:text-2xl text-center mt-4"
               style={{ opacity: "1", transform: "none" }}
             >
               We specialize in Fullstack Development &amp; Digital Marketing
               Strategies for your business.
             </p>
             <div
-              class="mt-12 md:mt-6"
+              className="mt-12 md:mt-6"
               style={{ opacity: "1", transform: "none" }}
             >
               <a
                 href="#services"
-                class="px-4 py-4 bg-primary hover:bg-opacity-90 transition-all font-bold text-[#f1f1f1] rounded mr-4"
+                className="px-4 py-4 bg-primary hover:bg-opacity-90 transition-all font-bold text-[#f1f1f1] rounded mr-4"
               >
                 Explore Our Services
               </a>
               <a
                 href="#contact"
-                class="px-6 py-4 border border-white hover:bg-white hover:text-black transition-all rounded-md"
+                className="px-6 py-4 border border-white hover:bg-white hover:text-black transition-all rounded-md"
               >
                 Contact Us
               </a>
@@ -92,13 +92,13 @@ export default function Welcome() {
         href="https://wa.me/+2347068546898"
         target="_blank"
         rel="noopener noreferrer"
-        class="fixed bottom-5 right-5 bg-green-500 text-white rounded-full p-4 shadow-lg hover:bg-green-600 transition-all duration-300 z-20"
+        className="fixed bottom-5 right-5 bg-green-500 text-white rounded-full p-4 shadow-lg hover:bg-green-600 transition-all duration-300 z-20"
         aria-label="Chat on WhatsApp"
       >
         <svg
           stroke="currentColor"
           fill="currentColor"
-          stroke-width="0"
+          strokeWidth="0"
           viewBox="0 0 448 512"
           height="30"
           width="30"

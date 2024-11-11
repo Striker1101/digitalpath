@@ -2,11 +2,15 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Header from "../../Components/Header";
-import partner from "../../Assets/images/logo.png";
+import partner1 from "../../Assets/images/client-logo/w1.png";
+import partner2 from "../../Assets/images/client-logo/w2.png";
+import partner3 from "../../Assets/images/client-logo/w3.png";
+import partner4 from "../../Assets/images/client-logo/w4.png";
+import partner5 from "../../Assets/images/client-logo/w5.png";
 
 export default function PartnerLogos() {
   // Define the logos data directly within the component
-  const logos = [partner, partner, partner, partner];
+  const logos = [partner1, partner2, partner3, partner4, partner5];
 
   return (
     <>

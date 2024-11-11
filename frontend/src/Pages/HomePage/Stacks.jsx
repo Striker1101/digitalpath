@@ -5,7 +5,7 @@ import firebase from "../../Assets/images/firebase.png";
 import mysql from "../../Assets/images/mysql.png";
 import download from "../../Assets/images/download.jpeg";
 import nestjs from "../../Assets/images/nestjs.png";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 const stackItems = [
   { src: nextjs, alt: "Partner Logo 1" },
@@ -18,11 +18,11 @@ const stackItems = [
 export default function Stacks() {
   return (
     <Swiper
-      modules={[Autoplay]}
+      modules={[Autoplay, Pagination]}
       spaceBetween={10}
-      slidesPerView={5}
+      slidesPerView={4}
+      pagination
       autoplay={{
-        delay: 100,
         disableOnInteraction: false,
       }}
       loop={true}
