@@ -64,20 +64,37 @@ export default function ContactUs() {
   };
 
   const services = [
+    // {
+    //   path: "maintenance_and_seo_improvement",
+    //   name: "Maintenance And SEO Improvement",
+    // },
+    // {
+    //   path: "business_website_improvement",
+    //   name: "Business Website Improvement",
+    // },
+    // { path: "cms_website_improvement", name: "CMS Website Improvement" },
+    // {
+    //   path: "e_commerce_website_improvement",
+    //   name: "E-Commerce Website Improvement",
+    // },
+    // { path: "other_web_service", name: "Other Web Service" },
+
     {
-      path: "maintenance_and_seo_improvement",
-      name: "Maintenance And SEO Improvement",
+      path: "website_development",
+      name: "Website development ",
     },
     {
-      path: "business_website_improvement",
-      name: "Business Website Improvement",
+      path: "support_digital_marketing",
+      name: "support Digital marketing ",
     },
-    { path: "cms_website_improvement", name: "CMS Website Improvement" },
     {
-      path: "e_commerce_website_improvement",
-      name: "E-Commerce Website Improvement",
+      path: "both",
+      name: "Both",
     },
-    { path: "other_web_service", name: "Other Web Service" },
+    {
+      path: "not_sure_enquiry",
+      name: "Not sure Enquiry",
+    },
   ];
 
   return (
