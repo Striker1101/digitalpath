@@ -1,8 +1,17 @@
 import React from "react";
 import logo from "../../Assets/images/logo.png";
+import Helmet from "react-helmet-async";
 export default function AboutUs() {
   return (
     <div className="w-full h-full pb-4 pd:mb-36 py-5 md:py-20 px-0 md:px-20 lg:px-40 bg-background2 bg-center bg-cover bg-no-repeat flex flex-col ">
+      <Helmet>
+        <script
+          async="async"
+          data-cfasync="false"
+          src="//pl24987142.profitablecpmrate.com/a0618b5519410189fd457cd33abb2e0d/invoke.js"
+        ></script>
+        <div id="container-a0618b5519410189fd457cd33abb2e0d"></div>
+      </Helmet>
       <div className="mt-20 px-6 md:px-20 pb-20 mx-auto w-11/12 md:w-full h-auto bg-white rounded-sm md:rounded-xl shadow-lg">
         <img
           src={logo}

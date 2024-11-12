@@ -9,6 +9,7 @@ import PortfolioHighlights from "./PortfolioHighlights";
 import Testimonials from "../HomePage/Testimony";
 import PartnerLogos from "./PartnerLogos";
 import ContactFormSection from "../HomePage/ContactUs";
+import Stacks from "../HomePage/Stacks";
 
 export default function WebDevelopment() {
   return (
@@ -21,7 +22,8 @@ export default function WebDevelopment() {
       <BlogHighlights />
       <PortfolioHighlights />
       <Testimonials />
-      <PartnerLogos />
+      {/* <PartnerLogos /> */}
+      <Stacks />
       <ContactFormSection />
     </div>
   );

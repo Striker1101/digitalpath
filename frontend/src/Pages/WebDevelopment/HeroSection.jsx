@@ -4,22 +4,15 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
-import jericho_hospital from "../../Assets/images/jericho-hospital.png";
-import tara_grill_groove from "../../Assets/images/tara-grill-groove.png";
-import ninimi_restaurant from "../../Assets/images/ninimi-restaurant.png";
-import cas_automobile_workshop from "../../Assets/images/cas-automobile-workshop.png";
-import queen_catering_events from "../../Assets/images/queen-catering-events.png";
-import cisco_autos from "../../Assets/images/cisco-autos.png";
+import bg1 from "../../Assets/images/Web/bg/bg1.jpeg";
+import bg2 from "../../Assets/images/Web/bg/bg2.jpeg";
+import bg3 from "../../Assets/images/Web/bg/bg3.jpeg";
+import bg4 from "../../Assets/images/Web/bg/bg4.jpg";
+import bg5 from "../../Assets/images/Web/bg/bg5.jpeg";
+
 export default function HeroSection() {
   // Array of image URLs for the background slider
-  const backgroundImages = [
-    jericho_hospital, // Replace with actual image paths
-    tara_grill_groove,
-    ninimi_restaurant,
-    cas_automobile_workshop,
-    queen_catering_events,
-    cisco_autos,
-  ];
+  const backgroundImages = [bg1, bg2, bg3, bg4, bg5];
 
   return (
     <section className="hero-section h-screen text-center text-white relative">
@@ -36,8 +29,8 @@ export default function HeroSection() {
               className="h-full w-full bg-cover bg-center"
               style={{
                 backgroundImage: `url(${image})`,
-                opacity: "0.09",
-                visibility: "0.1",
+                opacity: "0.3",
+                visibility: "0.5",
               }}
             ></div>
           </SwiperSlide>
