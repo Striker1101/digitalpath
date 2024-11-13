@@ -29,7 +29,6 @@ export const DataProvider = ({ children }) => {
       category: "maintenance_and_seo_improvement",
       images: [tara1, tara2, tara3, tara4],
     },
-    {},
     {
       id: 2,
       name: "Ninimi Restaurant",
@@ -38,6 +37,7 @@ export const DataProvider = ({ children }) => {
         "Enjoy Our Delicious Meal, Savor the flavors of our exquisite dishes, crafted with passion and the freshest ingredients.",
       link: "https://ninimi-restaurant.netlify.app/",
       category: "business_website_improvement",
+      images: [],
     },
     {
       id: 3,
@@ -47,6 +47,7 @@ export const DataProvider = ({ children }) => {
         "Cas Automobile Workshop: Qualified Car Repair Service Center",
       link: "https://cas-automobile-workshop.netlify.app/",
       category: "cms_website_improvement",
+      images: [],
     },
     {
       id: 4,
@@ -56,6 +57,7 @@ export const DataProvider = ({ children }) => {
         "Welcome to Queen Catering And Events, where culinary excellence meets outstanding service. We specialize in creating exceptional dining experiences for all events, from intimate gatherings to grand celebrations.",
       link: "https://queen-catering-events.netlify.app/",
       category: "e_commerce_website_improvement",
+      images: [],
     },
     {
       id: 5,
@@ -65,6 +67,7 @@ export const DataProvider = ({ children }) => {
         "Super Crispy Mabella Cakes & Catering The Best Cake In Universe",
       link: "https://mabella-cakes-catering.netlify.app/",
       category: "other_web_service",
+      images: [],
     },
     {
       id: 6,
@@ -74,6 +77,7 @@ export const DataProvider = ({ children }) => {
         "We are Cisco Autos, your premier destination for car dealership websites. Specializing in tailored online solutions for car dealerships.",
       link: "https://cisco-1.netlify.app/",
       category: "cms_website_improvement",
+      images: [],
     },
     {
       id: 7,
@@ -83,6 +87,7 @@ export const DataProvider = ({ children }) => {
         "Auto Maintenance & Repair Service. Maintaining your vehicle is essential for a smooth, reliable drive. Our Auto Maintenance & Repair Service offers comprehensive care to keep your car in peak condition for years.",
       link: "https://tuns-autotech.netlify.app/",
       category: "business_website_improvement",
+      images: [],
     },
     {
       id: 8,
@@ -92,6 +97,7 @@ export const DataProvider = ({ children }) => {
         "Your most trusted health partner. At our health center, your well-being is our priority. With dedicated professionals and state-of-the-art facilities.",
       link: "https://jericho-hospital.netlify.app/",
       category: "e_commerce_website_improvement",
+      images: [],
     },
   ];
   const [projects, setProjects] = useState(_projects);

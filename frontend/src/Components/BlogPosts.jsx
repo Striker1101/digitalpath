@@ -7,7 +7,7 @@ import {
   A11y,
   Autoplay,
 } from "swiper/modules";
-import blog_thump from "../../Assets/images/blog_thumb.png";
+import blog_thump from "../Assets/images/blog_thumb.png";
 const blogPosts = [
   {
     title: "Tips for Building a Successful E-commerce Site",

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import CounterComponent from "../../Components/CounterComponent";
-import Header from "../../Components/Header";
+import CounterComponent from "./CounterComponent";
+import Header from "./Header";
 
 const testimonyData = [
   {

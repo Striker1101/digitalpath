@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../Assets/images/logo.png";
-import Helmet from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 export default function AboutUs() {
   return (
     <div className="w-full h-full pb-4 pd:mb-36 py-5 md:py-20 px-0 md:px-20 lg:px-40 bg-background2 bg-center bg-cover bg-no-repeat flex flex-col ">
@@ -10,9 +10,19 @@ export default function AboutUs() {
           data-cfasync="false"
           src="//pl24987142.profitablecpmrate.com/a0618b5519410189fd457cd33abb2e0d/invoke.js"
         ></script>
-        <div id="container-a0618b5519410189fd457cd33abb2e0d"></div>
+
+        <script
+          type="text/javascript"
+          src="//pl24987223.profitablecpmrate.com/9f/20/ab/9f20ab002ee6e362b59e4cce9cef8251.js"
+        ></script>
+
+        <script
+          type="text/javascript"
+          src="//pl24987243.profitablecpmrate.com/ca/e2/66/cae26680882bceb733b35086d3801024.js"
+        ></script>
       </Helmet>
       <div className="mt-20 px-6 md:px-20 pb-20 mx-auto w-11/12 md:w-full h-auto bg-white rounded-sm md:rounded-xl shadow-lg">
+        <div id="container-a0618b5519410189fd457cd33abb2e0d"></div>
         <img
           src={logo}
           alt="company logo"

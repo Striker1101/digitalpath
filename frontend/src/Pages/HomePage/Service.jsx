@@ -10,6 +10,7 @@ import {
   faServer,
   faBolt,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function ServiceCard({ title, icon, link }) {
   return (
@@ -88,9 +89,11 @@ export default function Service() {
                   </div>
                 ))}
               </div>
-              <button className="text-xl font-Raleway text-white hover:bg-white hover:text-black text-center my-10 p-3 px-6 border border-white rounded-full cursor-pointer transition duration-300 transform hover:scale-105">
-                Learn More
-              </button>
+              <Link to={"/web-development"}>
+                <button className="text-xl font-Raleway text-white hover:bg-white hover:text-black text-center my-10 p-3 px-6 border border-white rounded-full cursor-pointer transition duration-300 transform hover:scale-105">
+                  Learn More
+                </button>
+              </Link>
             </div>
           </div>
 

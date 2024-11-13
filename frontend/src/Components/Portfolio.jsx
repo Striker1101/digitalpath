@@ -1,13 +1,7 @@
 import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-import jericho_hospital from "../../Assets/images/jericho-hospital.png";
-import tara_grill_groove from "../../Assets/images/tara-grill-groove.png";
-import ninimi_restaurant from "../../Assets/images/ninimi-restaurant.png";
-import cas_automobile_workshop from "../../Assets/images/cas-automobile-workshop.png";
-import queen_catering_events from "../../Assets/images/queen-catering-events.png";
-import cisco_autos from "../../Assets/images/cisco-autos.png";
-import { DataContext } from "../../store";
+import { DataContext } from "../store";
 
 export default function Portfolio() {
   const { projects } = useContext(DataContext);
