@@ -8,16 +8,19 @@ import AboutUs from "../Pages/About";
 import ContactUs from "../Pages/Contact";
 import Terms from "../Pages/TermsAndPrivacy/Terms";
 import Privacy from "../Pages/TermsAndPrivacy/Privacy";
-import PortfolioCategory from "../Pages/Portfolio/PortfolioCategory";
+import WebDevelopmentCategory from "../Pages/WebDevelopment/WebDevelopmentCategory";
 
 export default function RouthPaths() {
   return (
     <Routes>
       <Route path="/" index element={<Homepage />} />
       <Route path="/portfolio" element={<Portfolio />} />
-      <Route path="/portfolio/:category" element={<PortfolioCategory />} />
       <Route path="/digital-marketing" element={<DigitalMarketing />} />
       <Route path="/web-development" element={<WebDevelopment />} />
+      <Route
+        path="/web-development/:category"
+        element={<WebDevelopmentCategory />}
+      />
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/contact-us" element={<ContactUs />} />
       <Route path="/terms" element={<Terms />} />

@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./Header";
 import HeroSection from "../../Components/HeroSection";
 import ServicesOverview from "../../Components/ServicesOverview";
 import WhyChooseUs from "./WhyChooseUs";
@@ -29,56 +28,57 @@ import {
   faShoppingCart,
   faBlog,
 } from "@fortawesome/free-solid-svg-icons";
+import { Helmet } from "react-helmet-async";
 
 const services = [
   {
     name: "API Development and Integration",
-    link: "/portfolio/api_development_integration",
+    link: "/web-development/api_development_integration",
     icon: faPlug,
   },
   {
     name: "Software Development",
-    link: "/portfolio/software_development",
+    link: "/web-development/software_development",
     icon: faCode,
   },
   {
     name: "Web & Mobile App Development",
-    link: "/portfolio/web_mobile_app_development",
+    link: "/web-development/web_mobile_app_development",
     icon: faMobileAlt,
   },
   {
     name: "Business Website Development",
-    link: "/portfolio/business_website_improvement",
+    link: "/web-development/business_website_improvement",
     icon: faBriefcase,
   },
   {
     name: "Website UI/UX Design & Development",
-    link: "/portfolio/website_ui_ux_design",
+    link: "/web-development/website_ui_ux_design",
     icon: faPencilRuler,
   },
   {
     name: "SEO Improvement",
-    link: "/portfolio/seo_improvement",
+    link: "/web-development/seo_improvement",
     icon: faSearch,
   },
   {
     name: "Maintenance and Support",
-    link: "/portfolio/maintenance_support",
+    link: "/web-development/maintenance_support",
     icon: faTools,
   },
   {
     name: "CMS Website Development",
-    link: "/portfolio/cms_website_development",
+    link: "/web-development/cms_website_development",
     icon: faServer,
   },
   {
     name: "E-commerce Website Development",
-    link: "/portfolio/e-commerce_website_development",
+    link: "/web-development/e-commerce_website_development",
     icon: faShoppingCart,
   },
   {
     name: "Blogging Website Development",
-    link: "/portfolio/blogging_website_development",
+    link: "/web-development/blogging_website_development",
     icon: faBlog,
   },
 ];

@@ -2,11 +2,11 @@ import React from "react";
 import Welcome from "./Welcome";
 import Results from "./Results";
 import HeroSection from "../../Components/HeroSection";
-import bg1 from "../../Assets/images/Web/bg/bg1.jpeg";
-import bg2 from "../../Assets/images/Web/bg/bg2.jpeg";
-import bg3 from "../../Assets/images/Web/bg/bg3.jpeg";
-import bg4 from "../../Assets/images/Web/bg/bg4.jpg";
-import bg5 from "../../Assets/images/Web/bg/bg5.jpeg";
+import bg1 from "../../Assets/images/Digital_Marketing/bg1.jpeg";
+import bg2 from "../../Assets/images/Digital_Marketing/bg2.jpeg";
+import bg3 from "../../Assets/images/Digital_Marketing/bg3.jpeg";
+import bg4 from "../../Assets/images/Digital_Marketing/bg4.jpeg";
+import bg5 from "../../Assets/images/Digital_Marketing/bg5.jpeg";
 import FloatingChatWidget from "../../Components/FloatingChatWidget";
 import ServicesOverview from "../../Components/ServicesOverview";
 
