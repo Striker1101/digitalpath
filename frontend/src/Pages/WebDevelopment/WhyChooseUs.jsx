@@ -1,50 +1,7 @@
 import React from "react";
 import Header from "../../Components/Header";
 
-const reasons = [
-  {
-    name: "Credibility and Trust",
-    desc: "Our team’s proven track record and consistent delivery build a foundation of trust for every client.",
-  },
-  {
-    name: "Efficiency in Our Work",
-    desc: "We optimize processes to ensure projects are completed on time without compromising on quality.",
-  },
-  {
-    name: "Enhanced Security",
-    desc: "Implementing the latest security standards to safeguard your data and protect your digital assets.",
-  },
-  {
-    name: "Unique Customizations",
-    desc: "We tailor every solution to fit your specific needs, providing a truly unique experience.",
-  },
-  {
-    name: "Best User Experience",
-    desc: "We prioritize ease of use and seamless navigation to engage and satisfy your audience.",
-  },
-  {
-    name: "Best SEO Services",
-    desc: "Utilizing proven SEO techniques to boost your visibility and drive more traffic to your site.",
-  },
-  {
-    name: "Comprehensive Expertise",
-    desc: "Our team of skilled professionals brings a wealth of knowledge across various industries.",
-  },
-  {
-    name: "Latest Technologies",
-    desc: "Leveraging cutting-edge technologies to keep you ahead in the ever-evolving digital landscape.",
-  },
-  {
-    name: "Affordable Pricing & Flexible Payment Plans",
-    desc: "Our solutions are competitively priced with flexible payment options to suit your budget.",
-  },
-  {
-    name: "Communication & Support",
-    desc: "Clear, open communication and ongoing support at every step of your project journey.",
-  },
-];
-
-export default function WhyChooseUs() {
+export default function WhyChooseUs({ reasons }) {
   return (
     <>
       <Header

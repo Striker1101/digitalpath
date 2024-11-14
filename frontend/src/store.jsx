@@ -56,7 +56,7 @@ export const DataProvider = ({ children }) => {
       description:
         "Welcome to Queen Catering And Events, where culinary excellence meets outstanding service. We specialize in creating exceptional dining experiences for all events, from intimate gatherings to grand celebrations.",
       link: "https://queen-catering-events.netlify.app/",
-      category: "e_commerce_website_improvement",
+      category: "e-commerce_website_development",
       images: [],
     },
     {
@@ -66,7 +66,7 @@ export const DataProvider = ({ children }) => {
       description:
         "Super Crispy Mabella Cakes & Catering The Best Cake In Universe",
       link: "https://mabella-cakes-catering.netlify.app/",
-      category: "other_web_service",
+      category: "software_development",
       images: [],
     },
     {
@@ -96,7 +96,7 @@ export const DataProvider = ({ children }) => {
       description:
         "Your most trusted health partner. At our health center, your well-being is our priority. With dedicated professionals and state-of-the-art facilities.",
       link: "https://jericho-hospital.netlify.app/",
-      category: "e_commerce_website_improvement",
+      category: "e-commerce_website_development",
       images: [],
     },
   ];
@@ -107,3 +107,16 @@ export const DataProvider = ({ children }) => {
     </DataContext.Provider>
   );
 };
+
+/**
+ * blogging_website_development
+ * e-commerce_website_development
+ * cms_website_development
+ * maintenance_support
+ * seo_improvement
+ * website_ui_ux_design
+ * business_website_improvement
+ * web_mobile_app_development
+ * software_development
+ * api_development_integration
+ */

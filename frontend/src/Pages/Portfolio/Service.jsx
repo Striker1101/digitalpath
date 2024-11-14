@@ -39,7 +39,7 @@ export default function Service({ projects }) {
                 className="w-full h-[200px] object-cover rounded-t"
               />
               <Link
-                to={`/contact-us?purpose=${service.path}`} // Pass the service.path as a query parameter
+                to={process.env.REACT_APP_WHATSAPP_NUMBER} // Pass the service.path as a query parameter
                 className="my-auto mr-auto ml-3 p-2 text-sm text-blue-100 font-Poppins bg-black hover:bg-[#412001] rounded cursor-pointer"
               >
                 <h4>Request Service</h4>

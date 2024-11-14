@@ -1,36 +1,50 @@
 import React from "react";
 import Header from "./Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-export default function ServicesOverview({ services, btn_text, desc, title }) {
+
+export default function ServicesOverview({
+  services,
+  btn_text,
+  desc,
+  title,
+  link_avail = true,
+}) {
   return (
     <>
       <Header title={title} lineColor="blue" description={desc} />
-      <section className="p-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
         {services.map((service, index) => (
           <div
             key={index}
-            className="service-card bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-200 hover:bg-blue-50 border border-gray-200 flex flex-col items-start space-y-3"
+            className="service-card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 flex flex-col items-center text-center"
           >
-            {/* FontAwesomeIcon for each service */}
-            <div className="icon bg-blue-100 p-3 rounded-full mb-4 flex items-center justify-center">
+            {/* Icon with Title */}
+            <div className="icon-container bg-blue-100 p-4 rounded-full mb-6 flex items-center justify-center shadow-md">
               <FontAwesomeIcon
                 icon={service.icon}
-                className="text-2xl text-blue-500"
+                className="text-3xl text-blue-500"
               />
             </div>
 
-            {/* Service title */}
-            <h3 className="text-xl font-semibold text-gray-800">
+            {/* Service Title */}
+            <h3 className="text-lg font-semibold text-gray-700 mb-3">
               {service.name}
             </h3>
 
-            {/* CTA link */}
-            <a
-              href={service.link}
-              className="text-blue-600 mt-2 font-medium hover:underline"
-            >
-              {btn_text}
-            </a>
+            {/* Service Description */}
+            <p className="text-gray-600 text-sm leading-relaxed mb-4">
+              {service.desc}
+            </p>
+
+            {/* CTA Link */}
+            {link_avail && service.link && (
+              <a
+                href={service.link}
+                className="text-blue-600 text-sm font-semibold hover:text-blue-700 transition-colors duration-200"
+              >
+                {btn_text} &rarr;
+              </a>
+            )}
           </div>
         ))}
       </section>

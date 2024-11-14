@@ -23,7 +23,13 @@ const testimonyData = [
   },
 ];
 
-export default function Testimony() {
+export default function Testimony({
+  first_text,
+  second_text,
+  first_number,
+  second_number,
+  percentage = false,
+}) {
   return (
     <div className="py-8 bg-white">
       <Header
@@ -62,17 +68,19 @@ export default function Testimony() {
         <div className="flex flex-col md:flex-row justify-center my-16 gap-y-9 text-black">
           <div className="mx-auto md:mx-4 w-3/5 md:w-auto p-4 text-center rounded-md border-2 border-primary">
             <h3 className="text-xl font-Nunito font-bold">
-              Completed Projects
+              {first_text || " Completed Projects"}
             </h3>
             <p className="text-3xl">
-              {<CounterComponent defaultCount={381} />}
+              {<CounterComponent defaultCount={first_number} />}
             </p>
           </div>
 
           <div className="mx-auto md:mx-4 w-3/5 md:w-auto p-4 text-center rounded-md border-2 border-primary">
-            <h3 className="text-xl font-Nunito font-bold">Happy Customers</h3>
+            <h3 className="text-xl font-Nunito font-bold">
+              {second_text || "Happy Customers"} {percentage && "%"}
+            </h3>
             <p className="text-3xl">
-              {<CounterComponent defaultCount={244} />}
+              {<CounterComponent defaultCount={second_number} />}
             </p>
           </div>
         </div>

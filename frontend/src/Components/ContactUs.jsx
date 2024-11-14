@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Header from "./Header";
 import { useLocation } from "react-router-dom";
-export default function ContactUs() {
+export default function ContactUs({ purposes }) {
   const location = useLocation();
 
   // Get the 'purpose' query parameter from the URL
@@ -63,25 +63,6 @@ export default function ContactUs() {
     }
   };
 
-  const services = [
-    {
-      path: "website_development",
-      name: "Website development ",
-    },
-    {
-      path: "support_digital_marketing",
-      name: "support Digital marketing ",
-    },
-    {
-      path: "both",
-      name: "Both",
-    },
-    {
-      path: "not_sure_enquiry",
-      name: "Not sure Enquiry",
-    },
-  ];
-
   return (
     <div>
       <Header
@@ -132,10 +113,10 @@ export default function ContactUs() {
               required
             >
               <option value="">Select...</option>
-              {services.map((service, i) => {
+              {purposes.map((purpose, i) => {
                 return (
-                  <option key={i} value={service.path}>
-                    {service.name}
+                  <option key={i} value={purpose}>
+                    {purpose}
                   </option>
                 );
               })}
@@ -217,7 +198,7 @@ export default function ContactUs() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-2 px-4 bg-green-500 text-white rounded hover:bg-green-700"
+              className="w-full py-2 my-4 px-4 bg-green-500 text-white rounded hover:bg-green-700"
             >
               {loading ? "Sending..." : "Send Message"}
             </button>

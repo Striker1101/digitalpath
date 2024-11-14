@@ -42,12 +42,12 @@ const services = [
   },
   {
     name: "Web & Mobile App Development",
-    link: "web_mobile_app_development",
+    link: "",
     icon: faMobileAlt,
   },
   {
     name: "Business Website Development",
-    link: "business_website_improvement",
+    link: "",
     icon: faBriefcase,
   },
   {
@@ -121,7 +121,9 @@ export default function DigitalMarketing() {
       <BlogPosts />
       <Portfolio />
       <Testimony />
-      <ContactUs />
+      <ContactUs
+        purposes={["Web Development", "Digital Marketing", "Both", "Not Sure"]}
+      />
       {/* <Results /> */}
     </div>
   );
