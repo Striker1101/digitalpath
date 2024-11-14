@@ -51,6 +51,28 @@ import blog_bg3 from "../../Assets/images/BlogWebsite/bg3.jpeg";
 import blog_bg4 from "../../Assets/images/BlogWebsite/bg4.jpeg";
 import blog_bg5 from "../../Assets/images/BlogWebsite/bg5.jpeg";
 
+//software development
+import software_dev_bg1 from "../../Assets/images/SoftwareDev/bg1.jpeg";
+import software_dev_bg2 from "../../Assets/images/SoftwareDev/bg2.jpeg";
+import software_dev_bg3 from "../../Assets/images/SoftwareDev/bg3.jpeg";
+import software_dev_bg4 from "../../Assets/images/SoftwareDev/bg4.jpeg";
+import software_dev_bg5 from "../../Assets/images/SoftwareDev/bg5.jpeg";
+import software_dev_bg6 from "../../Assets/images/SoftwareDev/bg6.jpeg";
+
+//maintaince and support
+import maintainance_and_support_bg1 from "../../Assets/images/WebMaintance/bg1.jpeg";
+import maintainance_and_support_bg2 from "../../Assets/images/WebMaintance/bg2.jpeg";
+import maintainance_and_support_bg3 from "../../Assets/images/WebMaintance/bg3.jpeg";
+import maintainance_and_support_bg4 from "../../Assets/images/WebMaintance/bg4.jpeg";
+import maintainance_and_support_bg5 from "../../Assets/images/WebMaintance/bg5.jpeg";
+
+//api integration
+import api_int_bg1 from "../../Assets/images/ApiIntegration/bg1.jpeg";
+import api_int_bg2 from "../../Assets/images/ApiIntegration/bg2.jpeg";
+import api_int_bg3 from "../../Assets/images/ApiIntegration/bg3.jpeg";
+import api_int_bg4 from "../../Assets/images/ApiIntegration/bg4.jpeg";
+import api_int_bg5 from "../../Assets/images/ApiIntegration/bg5.jpeg";
+
 import FloatingChatWidget from "../../Components/FloatingChatWidget";
 import ServicesOverview from "../../Components/ServicesOverview";
 import {
@@ -59,6 +81,7 @@ import {
   faAdjust,
   faMobile,
   faGlobe,
+  faForwardStep,
   faPlugCircleCheck,
   faStore,
   faBuilding,
@@ -93,6 +116,28 @@ import {
   faHandPointer,
   faUniversalAccess,
   faChartBar,
+  faGhost,
+  faBlog,
+  faNewspaper,
+  faJoint,
+  faWindowMaximize,
+  faSquare,
+  faFileCode,
+  faMedkit,
+  faJournalWhills,
+  faWheatAwnCircleExclamation,
+  faSquareShareNodes,
+  faSheetPlastic,
+  faShieldAlt,
+  faSyncAlt,
+  faCloudMeatball,
+  faHeartbeat,
+  faSearch,
+  faPlug,
+  faServer,
+  faBook,
+  faCheckCircle,
+  faCube,
 } from "@fortawesome/free-solid-svg-icons";
 
 import WhyChooseUs from "./WhyChooseUs";
@@ -176,9 +221,330 @@ function WebDevelopmentCategory() {
 
   switch (category) {
     case "api_development_integration":
+      keyFeature = [
+        {
+          feature: "Tailored APIs that Meet Your Unique Requirements",
+          icon: <FaMobileAlt />,
+          link: "",
+        },
+        {
+          feature: "Efficient Integration with Existing Systems and Services",
+          icon: <FaClipboardList />,
+          link: "",
+        },
+        {
+          feature: " ⁠In-Depth Documentation for Easy Onboarding",
+          icon: <FaSearch />,
+          link: "",
+        },
+        {
+          feature: "Rigorous Testing to Ensure Reliability and Performance",
+          icon: <FaTools />,
+          link: "",
+        },
+        {
+          feature: "Scalable Solutions for Growing Businesses",
+          icon: <FaSearch />,
+          link: "",
+        },
+        {
+          feature: "Ongoing Support and Consultation for API Optimization",
+          icon: <FaTools />,
+          link: "",
+        },
+      ];
+
+      backgroundImages = [
+        api_int_bg1,
+        api_int_bg2,
+        api_int_bg3,
+        api_int_bg4,
+        api_int_bg5,
+      ];
+
+      purposes = [
+        " API Development Inquiry",
+        "Integration Support",
+        "Consultation Request",
+        " General Feedback",
+      ];
+
+      reasons = [
+        {
+          name: "Experienced Developers with Deep Industry Knowledge",
+          desc: "Our skilled developers bring industry expertise to build reliable, high-quality blogging websites that maximize user engagement and satisfaction.",
+        },
+        {
+          name: "Proven Track Record of Successful API Implementations",
+          desc: "We have a strong history of successfully integrating APIs into blogging platforms, enhancing functionality and user experience with seamless interactions.",
+        },
+        {
+          name: "Customized Solutions to Fit Your Business Goals",
+          desc: "We design tailored blogging solutions aligned with your business objectives, optimizing functionality and enhancing your brand identity.",
+        },
+        {
+          name: "Commitment to Best Practices and Security Standards",
+          desc: "We prioritize security and adhere to best practices, ensuring your blogging platform is safe, reliable, and compliant with industry regulations.",
+        },
+        {
+          name: "Transparent Communication Throughout the Project",
+          desc: "We maintain open communication and provide ongoing feedback, ensuring your vision is fully realized and the development process is smooth.",
+        },
+        {
+          name: "Dedicated Support Team Ready to Assist",
+          desc: "Our dedicated support team is always available to assist with any questions or issues, ensuring your blog’s continued success and performance optimization.",
+        },
+      ];
+
+      services = [
+        {
+          name: "Custom API Development",
+          icon: faTools, // Custom API development often requires a hands-on approach, so we can use a tools icon.
+          link: "",
+          link_avail: false,
+          desc: "Create custom APIs tailored to your business needs, ensuring seamless integration with your systems and optimized for performance.",
+        },
+        {
+          name: "API Integration Services",
+          icon: faSquareShareNodes, // The icon for API integration can represent connectivity or sharing.
+          link: "",
+          link_avail: false,
+          desc: "Integrate third-party APIs into your systems to enhance functionality and streamline workflows, improving business operations.",
+        },
+        {
+          name: "RESTful and SOAP API Development",
+          icon: faServer, // RESTful and SOAP development relates to server-side programming.
+          link: "",
+          link_avail: false,
+          desc: "Develop RESTful and SOAP APIs for seamless communication between your application and third-party systems, ensuring fast and reliable data transfer.",
+        },
+        {
+          name: "API Documentation Creation",
+          icon: faBook, // API documentation is about providing clear instructions, so a book icon fits.
+          link: "",
+          link_avail: false,
+          desc: "Create comprehensive and easy-to-understand API documentation to guide developers in integrating and using your APIs efficiently.",
+        },
+        {
+          name: "API Testing and Quality Assurance",
+          icon: faCheckCircle, // QA and testing are about ensuring the quality and reliability of APIs, so a check icon fits well.
+          link: "",
+          link_avail: false,
+          desc: "Test and verify the functionality of your APIs, ensuring that they meet high standards of performance, security, and reliability.",
+        },
+        {
+          name: "Microservices Architecture",
+          icon: faCube, // Microservices architecture can be represented by the cube, symbolizing modular components.
+          link: "",
+          link_avail: false,
+          desc: "Design and implement microservices architectures to break down your application into manageable, scalable, and independently deployable services.",
+        },
+        {
+          name: "Legacy System Integration",
+          icon: faPlug, // Legacy system integration typically involves connecting older systems with newer ones.
+          link: "",
+          link_avail: false,
+          desc: "Integrate legacy systems with modern applications and services to ensure that older technologies continue to work efficiently within new ecosystems.",
+        },
+        {
+          name: "Third-Party API Integration",
+          icon: faLink, // Third-party API integration involves connecting different systems, represented by the link icon.
+          link: "",
+          link_avail: false,
+          desc: "Seamlessly integrate third-party APIs to extend your application's capabilities and enhance user experience with external services.",
+        },
+        {
+          name: "API Management and Monitoring",
+          icon: faHeartbeat, // API management and monitoring often involves performance tracking, best represented by a heartbeat icon.
+          link: "",
+          link_avail: false,
+          desc: "Monitor and manage your APIs to ensure optimal performance, track usage, detect issues, and maintain security across your services.",
+        },
+      ];
+
+      desc =
+        "Enhance your systems with seamless API integrations, connecting external services to streamline operations and improve functionality.";
+
+      headline = "Seamlessly Connect Your Applications with Custom APIs.";
+
+      subHeadline =
+        "Expert API development and integration services tailored for your business needs";
+
+      first_button_text = "Explore Our API Services";
+
+      testimony_first_text = "⁠⁠APIs Developed";
+
+      testimony_first_number = 100;
+
+      testimony_show_percentage = true;
+
+      testimony_second_text = "Average Integration Time Reduction";
+
+      testimony_second_number = 50;
       break;
 
     case "software_development":
+      keyFeature = [
+        {
+          feature: "⁠Agile Development Methodologies for Fast Delivery",
+          icon: <FaMobileAlt />,
+          link: "",
+        },
+        {
+          feature: " ⁠Scalable and Robust Software Architecture",
+          icon: <FaClipboardList />,
+          link: "",
+        },
+        {
+          feature: "User-Centric Design and Experience",
+          icon: <FaSearch />,
+          link: "",
+        },
+        {
+          feature: "⁠Comprehensive Testing and Quality Assurance",
+          icon: <FaTools />,
+          link: "",
+        },
+        {
+          feature:
+            "Transparent Communication Throughout the Development Process",
+          icon: <FaSearch />,
+          link: "",
+        },
+        {
+          feature: "⁠Cost-Effective Solutions with Flexible Pricing Models",
+          icon: <FaTools />,
+          link: "",
+        },
+      ];
+
+      backgroundImages = [
+        software_dev_bg1,
+        software_dev_bg2,
+        software_dev_bg3,
+        software_dev_bg4,
+        software_dev_bg5,
+        software_dev_bg6,
+      ];
+
+      purposes = [
+        "Custom Software Development",
+        "Enterprise Solutions",
+        "Integration Services",
+        "Maintenance Inquiry",
+      ];
+
+      reasons = [
+        {
+          name: "⁠Proven Track Record of Successful Software Projects",
+          desc: "Our extensive experience in building high-quality blogging websites across industries ensures reliable, impactful results that engage users and boost satisfaction.",
+        },
+        {
+          name: "Skilled Team of Experienced Developers and Analysts",
+          desc: "Our team of experts brings a wealth of knowledge and creative insight to build blogging platforms that perfectly reflect your brand’s style and vision.",
+        },
+        {
+          name: "Customized Solutions to Address Unique Business Challenges",
+          desc: "We craft tailored blogging solutions that meet the distinct needs of your business, enhancing functionality, user experience, and brand identity.",
+        },
+        {
+          name: "Emphasis on Security and Compliance Best Practices",
+          desc: "Our development practices prioritize data protection and regulatory compliance to ensure that your blog platform is secure, reliable, and trustworthy.",
+        },
+        {
+          name: "Strong Focus on Client Satisfaction and Long-Term Relationships",
+          desc: "With transparent communication and ongoing feedback, we ensure a collaborative process where your vision remains at the heart of development.",
+        },
+        {
+          name: "Comprehensive Post-Deployment Support and Maintenance",
+          desc: "We provide thorough support and maintenance, ensuring your blog’s continued success, performance optimization, and alignment with your business growth.",
+        },
+      ];
+
+      services = [
+        {
+          name: "Custom WordPress Blog Development",
+          icon: faForwardStep,
+          link: "",
+          link_avail: false,
+          desc: "Develop tailored WordPress blogs with responsive design, SEO optimization, and a user-friendly content management system to meet your unique content needs.",
+        },
+        {
+          name: "Ghost Blogging Platform Setup and Management",
+          icon: faGhost,
+          link: "",
+          link_avail: false,
+          desc: "Set up and manage Ghost blogging platforms with a focus on simplicity, speed, and an optimal writing experience for content creators and publishers.",
+        },
+        {
+          name: "Blogger Website Development Services",
+          icon: faBlog,
+          link: "",
+          link_avail: false,
+          desc: "Create Blogger websites with customizable themes and seamless Google integration, providing a smooth and engaging user experience for readers.",
+        },
+        {
+          name: "Medium-like Custom Blog Solutions",
+          icon: faMedkit,
+          link: "",
+          link_avail: false,
+          desc: "Develop blogs inspired by Medium's clean design, with streamlined publishing tools and a reader-friendly interface to enhance content readability.",
+        },
+        {
+          name: "Joomla Blog Development & Integration",
+          icon: faJournalWhills,
+          link: "",
+          link_avail: false,
+          desc: "Integrate Joomla-powered blogs, allowing flexible content management and customization for a unique, feature-rich blogging experience.",
+        },
+        {
+          name: "Wix Blog Creation & Optimization",
+          icon: faWheatAwnCircleExclamation,
+          link: "",
+          link_avail: false,
+          desc: "Design and optimize blogs on Wix with a focus on attractive templates, easy-to-use editing tools, and SEO optimization for greater visibility.",
+        },
+        {
+          name: "Squarespace Blogging Website Development",
+          icon: faSquareShareNodes,
+          link: "",
+          link_avail: false,
+          desc: "Create visually stunning blogs on Squarespace, with customizable templates, SEO tools, and an intuitive content management experience.",
+        },
+        {
+          name: "Static Site Generator Blogs (e.g., Jekyll, Hugo)",
+          icon: faSheetPlastic,
+          link: "",
+          link_avail: false,
+          desc: "Develop fast, secure static blogs using Jekyll or Hugo, ideal for high-performance content sites with minimal maintenance needs.",
+        },
+        {
+          name: "Ongoing Maintenance and Support",
+          icon: faTools,
+          link: "",
+          link_avail: false,
+          desc: "Provide comprehensive support and maintenance to ensure your blog operates smoothly, stays updated, and continues to meet evolving needs.",
+        },
+      ];
+      desc =
+        "Elevate your blogging experience with our expert blog development services, designed to optimize readability, engage your audience, and boost SEO performance. Whether you're an aspiring blogger or a content-focused business. ";
+
+      headline = "Custom Software Development Tailored to Your Business Needs";
+
+      subHeadline =
+        "Innovative solutions that drive efficiency, growth, and success.";
+
+      first_button_text = "Explore Our Software Development Services";
+
+      testimony_first_text = "⁠Completed Software Development Projects";
+
+      testimony_first_number = 200;
+
+      testimony_show_percentage = false;
+
+      testimony_second_text = "Satisfied Clients Benefiting from Our Solutions";
+
+      testimony_second_number = 150;
       break;
 
     case "web_mobile_app_development":
@@ -839,6 +1205,166 @@ function WebDevelopmentCategory() {
       break;
 
     case "maintenance_support":
+      keyFeature = [
+        {
+          feature: "⁠Routine Maintenance for Optimal Site Performance",
+          icon: <FaMobileAlt />,
+          link: "",
+        },
+        {
+          feature: "Security Protocols to Protect Against Vulnerabilities",
+          icon: <FaClipboardList />,
+          link: "",
+        },
+        {
+          feature: "Fast and Reliable Support Whenever You Need It",
+          icon: <FaSearch />,
+          link: "",
+        },
+        {
+          feature: "Quick Response Times for Critical Issues",
+          icon: <FaTools />,
+          link: "",
+        },
+        {
+          feature: "Regular Reporting on Site Performance and Health",
+          icon: <FaSearch />,
+          link: "",
+        },
+        {
+          feature: "Tailored Plans to Fit Your Budget and Needs",
+          icon: <FaTools />,
+          link: "",
+        },
+      ];
+
+      backgroundImages = [
+        maintainance_and_support_bg1,
+        maintainance_and_support_bg2,
+        maintainance_and_support_bg3,
+        maintainance_and_support_bg4,
+        maintainance_and_support_bg5,
+      ];
+
+      purposes = [
+        "Maintenance Inquiry",
+        "Support Request",
+        " Consultation Inquiry",
+        "General Feedback",
+      ];
+
+      reasons = [
+        {
+          name: "Experienced Technicians with Proven Expertise",
+          desc: "Our extensive experience in building high-quality blogging websites across industries ensures reliable, impactful results that engage users and boost satisfaction.",
+        },
+        {
+          name: "Comprehensive Support for All Platforms",
+          desc: "Our team of experts brings a wealth of knowledge and creative insight to build blogging platforms that perfectly reflect your brand’s style and vision.",
+        },
+        {
+          name: "Customized Maintenance Plans that Work for You",
+          desc: "We craft tailored blogging solutions that meet the distinct needs of your business, enhancing functionality, user experience, and brand identity.",
+        },
+        {
+          name: "Commitment to Preventive Care and Optimization",
+          desc: "Our development practices prioritize data protection and regulatory compliance to ensure that your blog platform is secure, reliable, and trustworthy.",
+        },
+        {
+          name: "Transparent Communication and Reporting",
+          desc: "With transparent communication and ongoing feedback, we ensure a collaborative process where your vision remains at the heart of development.",
+        },
+        {
+          name: "Focus on Client Satisfaction and Long-Term Relationships",
+          desc: "We provide thorough support and maintenance, ensuring your blog’s continued success, performance optimization, and alignment with your business growth.",
+        },
+      ];
+
+      services = [
+        {
+          name: "Regular Security Updates",
+          icon: faShieldAlt,
+          link: "",
+          link_avail: false,
+          desc: "Ensure your blog stays secure with regular security updates and patches, safeguarding your content and user data.",
+        },
+        {
+          name: "Content Updates and Management",
+          icon: faSyncAlt,
+          link: "",
+          link_avail: false,
+          desc: "Keep your blog content fresh and relevant with our efficient content update and management services tailored to your needs.",
+        },
+        {
+          name: "Performance Monitoring and Optimization",
+          icon: faChartLine,
+          link: "",
+          link_avail: false,
+          desc: "Boost your blog’s performance with continuous monitoring and optimization for faster loading times and smoother user experience.",
+        },
+        {
+          name: "Backup and Recovery Solutions",
+          icon: faCloudMeatball,
+          link: "",
+          link_avail: false,
+          desc: "Protect your content with reliable backup and recovery solutions, ensuring your blog data remains safe and accessible.",
+        },
+        {
+          name: "Website Health Audits",
+          icon: faHeartbeat,
+          link: "",
+          link_avail: false,
+          desc: "Maintain your blog’s performance with regular health audits that identify and address any issues affecting functionality and speed.",
+        },
+        {
+          name: "Bug Fixing and Error Repairs",
+          icon: faWrench,
+          link: "",
+          link_avail: false,
+          desc: "Resolve technical issues swiftly with our bug fixing and error repair services, ensuring your blog runs smoothly at all times.",
+        },
+        {
+          name: "Technical Support Services",
+          icon: faHeadset,
+          link: "",
+          link_avail: false,
+          desc: "Access professional technical support whenever needed, from troubleshooting to guidance, keeping your blog online and user-friendly.",
+        },
+        {
+          name: "SEO Maintenance",
+          icon: faSearch,
+          link: "",
+          link_avail: false,
+          desc: "Enhance your blog’s visibility with ongoing SEO maintenance, including keyword optimization and search ranking improvements.",
+        },
+        {
+          name: "Plugin and Software Updates",
+          icon: faPlug,
+          link: "",
+          link_avail: false,
+          desc: "Stay up-to-date with the latest features and security improvements through regular plugin and software updates.",
+        },
+      ];
+
+      desc =
+        "Boost your software's performance with our expert maintenance and support services, ensuring reliability, security, and continuous optimization for long-term success.";
+
+      headline = "Keep Your Website Running Smoothly and Securely.";
+
+      subHeadline =
+        "Comprehensive website maintenance and support tailored to your needs.";
+
+      first_button_text = "Explore Our Maintenance Services";
+
+      testimony_first_text = "Websites Maintained";
+
+      testimony_first_number = 200;
+
+      testimony_show_percentage = true;
+
+      testimony_second_text = "Average Website Uptime Improvement";
+
+      testimony_second_number = 99.99;
       break;
 
     case "cms_website_development":
@@ -1150,91 +1676,90 @@ function WebDevelopmentCategory() {
       reasons = [
         {
           name: "⁠⁠Proven Track Record in Blogging Website Projects",
-          desc: "Our extensive portfolio spans multiple industries and technologies, showcasing successful implementations across various platforms and business sectors. This diverse experience enables us to bring proven strategies and industry-specific insights to every project.",
+          desc: "We have a successful history of building impactful blogging websites across various industries, delivering quality results that drive engagement and satisfaction.",
         },
         {
           name: "⁠Tailored Solutions for Individual Needs and Stylistic Preferences",
-          desc: "We guide you through every stage of development, from initial concept and planning to design, implementation, testing, and final launch. Our comprehensive approach ensures a seamless journey from your initial idea to a fully functional website.",
+          desc: "We customize each project to reflect your unique vision and style, ensuring that every aspect of the website meets your specific requirements and aesthetic preferences.",
         },
         {
           name: "Experienced Team of Developers Specializing in Blogging Platforms",
-          desc: "Our team combines experienced developers, creative designers, and certified project managers who work collaboratively to deliver exceptional results. Each team member brings specialized expertise and years of professional experience to your project.",
+          desc: "Our team of skilled developers and designers bring extensive experience in blogging platforms, creating high-performing websites optimized for content sharing and user interaction.",
         },
         {
           name: "⁠Robust Data-Driven Approach for Enhanced Reader Experience",
-          desc: "We utilize Agile methodology to ensure rapid development cycles, frequent updates, and quick adaptability to changes. This approach enables faster delivery while maintaining high quality through continuous testing and refinement.",
+          desc: "By leveraging data insights, we design and develop user-friendly websites that improve reader engagement and streamline the browsing experience.",
         },
         {
           name: "⁠Emphasis on Communication and Client Satisfaction",
-          desc: "We maintain clear, consistent communication throughout your project and beyond, providing regular updates, detailed documentation, and responsive support. Our commitment to transparency ensures you're always informed about your project's progress and future maintenance.",
+          desc: "We prioritize transparent communication and client feedback, keeping you informed and involved throughout the entire development process for a smooth collaboration.",
         },
         {
           name: " ⁠Affordable Packages for Development and Ongoing Maintenance",
-          desc: "We create customized solutions that align with your budget while maximizing value and ROI. Our flexible pricing models and scalable solutions ensure you get the features and functionality you need without unnecessary expenses.",
+          desc: "Our cost-effective development and maintenance packages ensure you receive high-quality services that meet your budget while maximizing the value of your investment.",
         },
       ];
 
       services = [
         {
-          name: "⁠  ⁠Custom WordPress Blog Development",
-          icon: faCode,
+          name: "⁠⁠Custom WordPress Blog Development",
+          icon: faForwardStep,
           link: "",
           link_avail: false,
-          desc: "Build tailored web applications with cutting-edge technologies to meet your specific business requirements, ensuring scalability, security, and optimal performance.",
+          desc: "Develop highly customizable WordPress blogs tailored to your content needs, with responsive design, SEO optimization, and easy-to-use content management.",
         },
         {
-          name: " ⁠Ghost Blogging Platform Setup and Management",
-          icon: faAnchorCircleExclamation,
+          name: "⁠Ghost Blogging Platform Setup and Management",
+          icon: faGhost,
           link: "",
           link_avail: false,
-          desc: "Create native iOS applications optimized for iPhone and iPad, featuring intuitive interfaces, smooth performance, and full integration with iOS ecosystem features.",
+          desc: "Set up and manage Ghost blogging platforms designed for simplicity and speed, ideal for writers and publishers focusing on content-driven experiences.",
         },
         {
           name: "Blogger Website Development Services",
-          icon: faAdjust,
+          icon: faBlog,
           link: "",
           link_avail: false,
-          desc: "Develop custom Android applications that work across diverse devices, incorporating Material Design principles and leveraging the full potential of the Android platform.",
+          desc: "Develop engaging Blogger sites with user-friendly layouts, customizable themes, and integration with Google services to support your blogging journey.",
         },
         {
           name: "⁠Medium-like Custom Blog Solutions",
-          icon: faMobile,
+          icon: faNewspaper,
           link: "",
           link_avail: false,
-          desc: "Build efficient cross-platform applications using React Native or Flutter to maintain a single codebase while delivering native-like experience across iOS and Android.",
+          desc: "Create platforms with a Medium-like experience, enabling simple, elegant content publication and a reader-friendly interface for enhanced readability.",
         },
         {
           name: "Joomla Blog Development & Integration",
-          icon: faGlobe,
+          icon: faJoint,
           link: "",
           link_avail: false,
-          desc: "Develop progressive web applications that combine the best of web and mobile apps, offering offline functionality, push notifications, and app-like experience in the browser.",
+          desc: "Build and integrate Joomla-powered blogs, offering flexible content management and customization for unique blog layouts and functionality.",
         },
         {
-          name: "  ⁠Wix Blog Creation & Optimization",
-          icon: faPlugCircleCheck,
+          name: "⁠Wix Blog Creation & Optimization",
+          icon: faWindowMaximize,
           link: "",
           link_avail: false,
-          desc: "Design and implement robust APIs for seamless integration between systems, ensuring secure data exchange, documentation, and scalable architecture.",
+          desc: "Design and optimize blogs on Wix with visually appealing templates, intuitive drag-and-drop editing, and SEO-friendly architecture to boost visibility.",
         },
         {
           name: "⁠Squarespace Blogging Website Development",
-          icon: faStore,
+          icon: faSquare,
           link: "",
           link_avail: false,
-          desc: "Create comprehensive e-commerce solutions with secure payment processing, inventory management, and optimized shopping experience across web and mobile platforms.",
+          desc: "Develop aesthetically pleasing blogs on Squarespace with built-in SEO tools, customizable templates, and a focus on smooth content management.",
         },
         {
           name: "Static Site Generator Blogs (e.g., Jekyll, Hugo)",
-          icon: faBuilding,
+          icon: faFileCode,
           link: "",
           link_avail: false,
-          desc: "Develop sophisticated enterprise-level applications with advanced security features, scalable architecture, and integration capabilities for large-scale business operations.",
+          desc: "Build lightning-fast, secure static blogs using Jekyll or Hugo, ideal for content-heavy sites requiring minimal maintenance and high performance.",
         },
       ];
-
       desc =
-        "Transform your digital vision into reality with our expert web development solutions, from custom applications to enterprise platforms.";
+        "Bring your blog to life with our specialized blogging website solutions, tailored to enhance readability, user engagement, and SEO performance. Whether you're an individual blogger or a content-driven business.";
 
       headline = "Create Your Voice with Custom Blogging Website Development";
 

@@ -120,7 +120,7 @@ export default function DigitalMarketing() {
       <WhyChooseUs />
       <BlogPosts />
       <Portfolio />
-      <Testimony />
+      <Testimony first_number={300} second_number={280} />
       <ContactUs
         purposes={["Web Development", "Digital Marketing", "Both", "Not Sure"]}
       />

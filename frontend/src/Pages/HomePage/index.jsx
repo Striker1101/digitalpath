@@ -21,6 +21,12 @@ const stackItems = [
   { src: download, alt: "Partner Logo 4" },
   { src: nestjs, alt: "Partner Logo 5" },
 ];
+const purposes = [
+  " Website Development",
+  "Digital Marketing",
+  "Both",
+  "Inquiry",
+];
 
 export default function Homepage() {
   return (
@@ -31,9 +37,9 @@ export default function Homepage() {
       <WhyChooseUs />
       <BlogPosts />
       <Portfolio />
-      <Testimony />
+      <Testimony first_number={300} second_number={280} />
       <Stacks stackItems={stackItems} />
-      <ContactUs />
+      <ContactUs purposes={purposes} />
     </div>
   );
 }

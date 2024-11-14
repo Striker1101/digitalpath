@@ -9,6 +9,7 @@ import ContactUs from "../Pages/Contact";
 import Terms from "../Pages/TermsAndPrivacy/Terms";
 import Privacy from "../Pages/TermsAndPrivacy/Privacy";
 import WebDevelopmentCategory from "../Pages/WebDevelopment/WebDevelopmentCategory";
+import FAQ from "../Pages/QuesAndAns";
 
 export default function RouthPaths() {
   return (
@@ -25,6 +26,7 @@ export default function RouthPaths() {
       <Route path="/contact-us" element={<ContactUs />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/privacy-policy" element={<Privacy />} />
+      <Route path="/faq" element={<FAQ />} />
     </Routes>
   );
 }

@@ -3,6 +3,8 @@ import Footer from "./Utils/Footer";
 import RouthPaths from "./Utils/RouthPaths";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { ToastContainer } from "react-toastify";
+import ScrollToTop from "./Components/ScrollTop";
 function App() {
   const location = useLocation();
 
@@ -41,6 +43,22 @@ function App() {
 
   return (
     <div className="bg-[#01010b] text-white min-h-screen">
+      <ScrollToTop />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition="Bounce"
+      />
+      {/* Same as */}
+      <ToastContainer />
       <div className="w-full h-auto bg-white">
         <Navigation />
         <RouthPaths />

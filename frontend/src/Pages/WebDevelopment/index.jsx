@@ -4,7 +4,6 @@ import ServicesOverview from "../../Components/ServicesOverview";
 import WhyChooseUs from "./WhyChooseUs";
 import BlogHighlights from "./BlogHighlights";
 import PortfolioHighlights from "./PortfolioHighlights";
-import Testimonials from "../../Components/Testimony";
 import PartnerLogos from "./PartnerLogos";
 import ContactFormSection from "../../Components/ContactUs";
 import bg1 from "../../Assets/images/Web/bg/bg1.jpeg";
@@ -33,6 +32,7 @@ import firebase from "../../Assets/images/firebase.png";
 import mysql from "../../Assets/images/mysql.png";
 import download from "../../Assets/images/download.jpeg";
 import nestjs from "../../Assets/images/nestjs.png";
+import Testimony from "../../Components/Testimony";
 
 const stackItems = [
   { src: nextjs, alt: "Partner Logo 1" },
@@ -165,7 +165,7 @@ export default function WebDevelopment() {
       <WhyChooseUs reasons={reasons} />
       <BlogHighlights />
       <PortfolioHighlights />
-      <Testimonials />
+      <Testimony first_number={300} second_number={280} />
       {/* <PartnerLogos /> */}
       <Stacks stackItems={stackItems} />
       <ContactFormSection purposes={purposes} />

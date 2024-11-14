@@ -68,7 +68,7 @@ export default function Testimony({
         <div className="flex flex-col md:flex-row justify-center my-16 gap-y-9 text-black">
           <div className="mx-auto md:mx-4 w-3/5 md:w-auto p-4 text-center rounded-md border-2 border-primary">
             <h3 className="text-xl font-Nunito font-bold">
-              {first_text || " Completed Projects"}
+              {first_text || " Completed Projects"} {percentage && "+"}
             </h3>
             <p className="text-3xl">
               {<CounterComponent defaultCount={first_number} />}

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Header from "./Header";
 import { useLocation } from "react-router-dom";
+import { toast } from "react-toastify";
 export default function ContactUs({ purposes }) {
   const location = useLocation();
 
@@ -20,8 +21,6 @@ export default function ContactUs({ purposes }) {
   });
 
   const [loading, setLoading] = useState(false);
-  const [successMessage, setSuccessMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
 
   // Handle change for form fields
   const handleChange = (e) => {
@@ -36,8 +35,6 @@ export default function ContactUs({ purposes }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setSuccessMessage("");
-    setErrorMessage("");
 
     try {
       const response = await axios.post(
@@ -45,7 +42,7 @@ export default function ContactUs({ purposes }) {
         formData
       );
       setLoading(false);
-      setSuccessMessage("Your message has been sent successfully!");
+      toast.success("Your message has been sent successfully!");
       setFormData({
         purpose: "",
         name: "",
@@ -57,9 +54,7 @@ export default function ContactUs({ purposes }) {
     } catch (error) {
       console.log(error);
       setLoading(false);
-      setErrorMessage(
-        "There was an error sending your message. Please try again."
-      );
+      toast.error("There was an error sending your message. Please try again.");
     }
   };
 
@@ -94,14 +89,6 @@ export default function ContactUs({ purposes }) {
           </svg>
           Contact Us on WhatsApp
         </Link>
-
-        {successMessage && (
-          <div className="text-green-500 mb-4">{successMessage}</div>
-        )}
-        {errorMessage && (
-          <div className="text-red-500 mb-4">{errorMessage}</div>
-        )}
-
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700">Purpose</label>
