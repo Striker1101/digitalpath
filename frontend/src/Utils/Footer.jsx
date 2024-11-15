@@ -58,14 +58,16 @@ export default function Footer() {
             <h3 className="text-xl font-semibold text-primary">Contact Info</h3>
             <p className="text-lg text-gray-400">
               Email:{" "}
-              <span className="text-gray-300">contact@digitalpath.com</span>
+              <span className="text-gray-300">talk2us@digitalpath.com.ng</span>
             </p>
             <p className="text-lg text-gray-400">
               Phone: <span className="text-gray-300">+234 706 854 6898</span>
             </p>
             <p className="text-lg text-gray-400">
               Address:{" "}
-              <span className="text-gray-300">123 Digital Ave, Lagos</span>
+              <span className="text-gray-300">
+                1 liberty street, Ikorodu Lagos
+              </span>
             </p>
           </div>
 

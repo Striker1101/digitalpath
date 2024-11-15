@@ -31,64 +31,34 @@ import ContactUs from "../../Components/ContactUs";
 
 const services = [
   {
-    name: "⁠Search Engine Optimization (SEO)",
-    link: "",
+    name: "Email Marketing",
+    link: "/digital-marketing/email_marketing",
     icon: faPlug,
   },
   {
-    name: "Pay-Per-Click Advertising (PPC)",
-    link: "",
+    name: "Social Media Management",
+    link: "/digital-marketing/social_media_management",
     icon: faCode,
   },
   {
-    name: "Web & Mobile App Development",
-    link: "",
+    name: "Content Marketing",
+    link: "/digital-marketing/content_marketing",
     icon: faMobileAlt,
   },
   {
-    name: "Business Website Development",
-    link: "",
+    name: "Pay Per Click Advertising",
+    link: "/digital-marketing/pay_per_click_advertising",
     icon: faBriefcase,
   },
   {
-    name: "Social Media Marketing",
-    link: "",
+    name: "Brand Management And Positioning",
+    link: "/digital-marketing/brand_management_and_positioning",
     icon: faPencilRuler,
   },
   {
-    name: "Content Marketing",
-    link: "",
+    name: "Digital marketing consultation",
+    link: "/digital-marketing/digital_marketing_consultation",
     icon: faSearch,
-  },
-  {
-    name: "Email Marketing",
-    link: "",
-    icon: faTools,
-  },
-  {
-    name: "Brand Strategy & Positioning",
-    link: "",
-    icon: faServer,
-  },
-  {
-    name: "Website Analytics & Reporting",
-    link: "",
-    icon: faShoppingCart,
-  },
-  {
-    name: "⁠Conversion Rate Optimization",
-    link: "",
-    icon: faBlog,
-  },
-  {
-    name: "⁠Influencer Marketing",
-    link: "",
-    icon: faBlog,
-  },
-  {
-    name: "⁠Digital Marketing Consultations",
-    link: "",
-    icon: faBlog,
   },
 ];
 
@@ -115,7 +85,7 @@ export default function DigitalMarketing() {
         desc={
           "Discover a variety of professional services designed to elevate your digital presence and streamline your business operations."
         }
-        btn_text={"Learn More"}
+        btn_text={"See More"}
       />
       <WhyChooseUs />
       <BlogPosts />

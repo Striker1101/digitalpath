@@ -5,8 +5,10 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import ScrollToTop from "./Components/ScrollTop";
+import { useNavigate } from "react-router-dom";
 function App() {
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleHashLinkScroll = (event) => {
@@ -40,6 +42,14 @@ function App() {
       }
     }
   }, [location.hash]);
+
+  useEffect(() => {
+    const isFilled =
+      JSON.parse(localStorage.getItem("isFilledContactForm")) || false;
+    if (!isFilled) {
+      navigate("/contact-us");
+    }
+  }, [navigate]);
 
   return (
     <div className="bg-[#01010b] text-white min-h-screen">

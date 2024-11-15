@@ -4,12 +4,14 @@ import axios from "axios";
 import Header from "./Header";
 import { useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 export default function ContactUs({ purposes }) {
   const location = useLocation();
 
   // Get the 'purpose' query parameter from the URL
   const queryParams = new URLSearchParams(location.search);
   const purposeFromQuery = queryParams.get("purpose");
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     purpose: purposeFromQuery || "",
@@ -37,12 +39,19 @@ export default function ContactUs({ purposes }) {
     setLoading(true);
 
     try {
-      const response = await axios.post(
+      await axios.post(
         `${process.env.REACT_APP_BACKEND_URL}/users/contact_us`,
         formData
       );
       setLoading(false);
-      toast.success("Your message has been sent successfully!");
+      let prevIsFilledContactForm = JSON.parse(
+        localStorage.get("isFilledContactForm")
+      );
+
+      localStorage.setItem("isFilledContactForm", JSON.stringify(true));
+      toast.success(
+        "Thank you! Your message has been successfully submitted. We will get back to you shortly."
+      );
       setFormData({
         purpose: "",
         name: "",
@@ -51,10 +60,15 @@ export default function ContactUs({ purposes }) {
         message: "",
         terms: false,
       });
+      if (!prevIsFilledContactForm) {
+        navigate("/");
+      }
     } catch (error) {
       console.log(error);
       setLoading(false);
-      toast.error("There was an error sending your message. Please try again.");
+      toast.error(
+        "Oops! Something went wrong while sending your message. Please try again later."
+      );
     }
   };
 
