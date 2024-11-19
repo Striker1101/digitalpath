@@ -10,6 +10,7 @@ import Terms from "../Pages/TermsAndPrivacy/Terms";
 import Privacy from "../Pages/TermsAndPrivacy/Privacy";
 import WebDevelopmentCategory from "../Pages/WebDevelopment/WebDevelopmentCategory";
 import FAQ from "../Pages/QuesAndAns";
+import DigitalMarketingCategory from "../Pages/DigitalMarketing/DigitalMarketingCategory";
 
 export default function RouthPaths() {
   return (
@@ -17,6 +18,10 @@ export default function RouthPaths() {
       <Route path="/" index element={<Homepage />} />
       <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/digital-marketing" element={<DigitalMarketing />} />
+      <Route
+        path="/digital-marketing/:category"
+        element={<DigitalMarketingCategory />}
+      />
       <Route path="/web-development" element={<WebDevelopment />} />
       <Route
         path="/web-development/:category"

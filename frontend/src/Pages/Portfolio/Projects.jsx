@@ -1,41 +1,64 @@
 import React from "react";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Projects({ projects }) {
   return (
     <div className="w-full h-auto py-10">
-      <h2 className="text-4xl md:text-5xl text-[#412001] font-Poppins text-center my-8">
-        Previous Projects
-      </h2>
       <div className="w-full h-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-10">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="mx-auto w-10/12 md:w-[500px] h-[420px] bg-[#ffffff] border border-slate-200 rounded-lg shadow-lg hover:shadow-xl flex flex-col items-center transform transition-transform duration-300 hover:scale-105"
+            className="relative mx-auto w-10/12 md:w-[300px] h-[300px] bg-gray-100 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transform transition-transform duration-300 hover:scale-105"
           >
+            {/* Image */}
             <img
               src={project.image}
               alt={project.name}
-              className="w-full h-[260px] object-cover rounded-t"
+              className="w-full h-full object-cover transition-opacity duration-300 hover:opacity-50"
             />
-            <div className="px-4 w-full md:h-[170px]">
-              <h4 className="text-lg text-[#412001] font-Raleway font-semibold my-2">
+
+            {/* Hover Overlay */}
+            <div className="absolute inset-0 flex flex-col justify-center items-center transition-opacity duration-300 opacity-0 hover:opacity-100 bg-black bg-opacity-60">
+              <h4 className="text-lg text-white font-semibold mb-2">
                 {project.name}
               </h4>
-              <p className="line-clamp-2 text-lg text-slate-700">
+              <p className="text-sm text-white px-4 text-center">
                 {project.description}
               </p>
             </div>
+
+            {/* Action Icon */}
             <a
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="my-4 mr-auto ml-3 p-2 px-3 text-sm text-blue-100 font-Poppins bg-black hover:bg-[#412001] rounded cursor-pointer"
+              className="absolute bottom-4 right-4 w-10 h-10 bg-red-500 text-white flex justify-center items-center rounded-md transition-all duration-300 hover:scale-125"
+              title="Visit Site"
+              onMouseEnter={(e) =>
+                e.currentTarget.classList.add("animate-shake")
+              }
+              onMouseLeave={(e) =>
+                e.currentTarget.classList.remove("animate-shake")
+              }
             >
-              Visit Site
+              <FaExternalLinkAlt />
             </a>
           </div>
         ))}
       </div>
+
+      {/* Keyframe for Icon Animation */}
+      <style>{`
+        @keyframes shake {
+          0%, 100% { transform: translateX(0); }
+          25% { transform: translateX(-5px); }
+          50% { transform: translateX(5px); }
+          75% { transform: translateX(-5px); }
+        }
+        .animate-shake {
+          animation: shake 0.2s ease-in-out 3;
+        }
+      `}</style>
     </div>
   );
 }

@@ -79,7 +79,7 @@ export default function Welcome() {
                 Explore Our Services
               </a>
               <a
-                href="#contact"
+                href="#contact-us"
                 className="px-6 py-4 border border-white hover:bg-white hover:text-black transition-all rounded-md"
               >
                 Contact Us

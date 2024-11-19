@@ -43,13 +43,15 @@ function App() {
     }
   }, [location.hash]);
 
-  useEffect(() => {
-    const isFilled =
-      JSON.parse(localStorage.getItem("isFilledContactForm")) || false;
-    if (!isFilled) {
-      navigate("/contact-us");
-    }
-  }, [navigate]);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     const isFilled =
+  //       JSON.parse(localStorage.getItem("isFilledContactForm")) || false;
+  //     if (!isFilled) {
+  //       navigate("/contact-us");
+  //     }
+  //   }, 7000);
+  // }, [navigate]);
 
   return (
     <div className="bg-[#01010b] text-white min-h-screen">

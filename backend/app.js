@@ -11,13 +11,15 @@ require("dotenv").config();
 var app = express();
 
 // Define allowed origins for CORS
-const allowedOrigins = ["https://digitalpath.com.ng", "http://localhost:3000"];
+const allowedOrigins = [
+  "https://digitalpath.com.ng",
+  "https://backend.digitalpath.com.ng",
+  "http://localhost:3000",
+];
 
-// Configure CORS to allow requests from specified origins
 app.use(
   cors({
     origin: function (origin, callback) {
-      // Allow requests with no origin (e.g., mobile apps or curl requests)
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
@@ -26,9 +28,11 @@ app.use(
     },
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true, // Include credentials if needed
+    credentials: true,
   })
 );
+
+app.options("*", cors());
 
 app.use(logger("dev"));
 
@@ -57,11 +61,8 @@ app.use(function (req, res, next) {
 
 // Error handler
 app.use(function (err, req, res, next) {
-  // Set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get("env") === "development" ? err : {};
-
-  // Send error response as JSON
   res.status(err.status || 500).json({
     error: err.message,
     status: err.status,

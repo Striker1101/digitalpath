@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeroSection from "../../Components/HeroSection";
 import ServicesOverview from "../../Components/ServicesOverview";
 import WhyChooseUs from "./WhyChooseUs";
@@ -33,6 +33,7 @@ import mysql from "../../Assets/images/mysql.png";
 import download from "../../Assets/images/download.jpeg";
 import nestjs from "../../Assets/images/nestjs.png";
 import Testimony from "../../Components/Testimony";
+import { useNavigate } from "react-router-dom";
 
 const stackItems = [
   { src: nextjs, alt: "Partner Logo 1" },
@@ -141,6 +142,39 @@ const reasons = [
 const purposes = [" Website Development", "Consultation", "General Inquiry"];
 
 export default function WebDevelopment() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      const isFilled =
+        JSON.parse(localStorage.getItem("isFilledContactForm")) || false;
+      if (!isFilled) {
+        // Update the URL with the hash
+        navigate("/web-development/#contact-us");
+
+        // Wait briefly and scroll to the element
+        setTimeout(() => {
+          const target = document.getElementById("contact-us");
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100); // Small delay to ensure the DOM reflects the hash update
+      }
+    }, 7000);
+
+    // Cleanup timeout on component unmount
+    return () => clearTimeout(timeoutId);
+  }, [navigate]);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      localStorage.setItem("isFilledContactForm", JSON.stringify(true));
+    }, 9000);
+
+    // Cleanup timeout on component unmount
+    return () => clearTimeout(timeoutId);
+  }, []);
+
   return (
     <div>
       {/* <Header /> */}
@@ -149,7 +183,7 @@ export default function WebDevelopment() {
         big_title={"Elevate Your Online Presence"}
         small_title={"Transforming Your Ideas into Digital Reality"}
         first_button_text={"Explore Our Services"}
-        first_button_link={"/web-development/#contact"}
+        first_button_link={"/web-development/#contact-us"}
         second_button_text={"Contact Us on WhatsApp"}
         second_button_link={"https://wa.me/2347068546898"}
       />
@@ -168,7 +202,22 @@ export default function WebDevelopment() {
       <Testimony first_number={300} second_number={280} />
       {/* <PartnerLogos /> */}
       <Stacks stackItems={stackItems} />
-      <ContactFormSection purposes={purposes} />
+      {/* <ContactFormSection purposes={purposes} /> */}
+      <section id="contact-us">
+        <div className="flex justify-center items-center mb-4 min-h-screen">
+          <iframe
+            title="web development"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfTZHjlsSoi3E8hiUT340u9vKyCC6Xun79sln8RMi3yfllDhA/viewform?embedded=true"
+            width="640"
+            height="1025"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
+        </div>
+      </section>
     </div>
   );
 }

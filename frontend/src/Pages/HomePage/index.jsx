@@ -39,7 +39,22 @@ export default function Homepage() {
       <Portfolio />
       <Testimony first_number={300} second_number={280} />
       <Stacks stackItems={stackItems} />
-      <ContactUs purposes={purposes} />
+      {/* <ContactUs purposes={purposes} /> */}
+      <section id="contact-us">
+        <div className="flex justify-center items-center mb-4 min-h-screen">
+          <iframe
+            title="HomePage Form"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSe-aDd5tOGZAO-KYRcLU9TQQ3WflEw0M87rRCsTcWlsH4hFjQ/viewform?embedded=true"
+            width="640"
+            height="1138"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
+        </div>
+      </section>
     </div>
   );
 }

@@ -18,10 +18,6 @@ import {
   faBriefcase,
   faPencilRuler,
   faSearch,
-  faTools,
-  faServer,
-  faShoppingCart,
-  faBlog,
 } from "@fortawesome/free-solid-svg-icons";
 import WhyChooseUs from "../../Components/WhyChooseUs";
 import BlogPosts from "../../Components/BlogPosts";
@@ -72,7 +68,7 @@ export default function DigitalMarketing() {
         }
         small_title={"Let's take your business to its next level."}
         first_button_text={"Explore Our Services"}
-        first_button_link={"/web-development/#contact"}
+        first_button_link={"/web-development/#contact-us"}
         second_button_text={"Get a Free Consultation"}
         second_button_link={"https://wa.me/2347068546898"}
       />
@@ -91,9 +87,25 @@ export default function DigitalMarketing() {
       <BlogPosts />
       <Portfolio />
       <Testimony first_number={300} second_number={280} />
-      <ContactUs
+      {/* <ContactUs
         purposes={["Web Development", "Digital Marketing", "Both", "Not Sure"]}
-      />
+      /> */}
+      <section id="contact-us">
+        <div className="flex justify-center items-center mb-4 min-h-screen">
+          <iframe
+            title="digital marketing"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSenPy0u2xbO7_hZAAhmp6nP0Bu-vMzHTzpW2C3IdUcm0yzOlQ/viewform?embedded=true"
+            width="640"
+            height="1025"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
+        </div>
+      </section>
+
       {/* <Results /> */}
     </div>
   );

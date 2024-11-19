@@ -12,7 +12,10 @@ export default function ServicesOverview({
   return (
     <>
       <Header title={title} lineColor="blue" description={desc} />
-      <section className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+      <section
+        className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8"
+        id="services"
+      >
         {services.map((service, index) => (
           <div
             key={index}

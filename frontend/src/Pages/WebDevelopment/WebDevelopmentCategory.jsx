@@ -225,6 +225,163 @@ function WebDevelopmentCategory() {
     (project) => project.category === category
   );
 
+  function displayContactForm() {
+    switch (category) {
+      case "api_development_integration":
+        return (
+          <iframe
+            title="api_development_integration"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfnTCQZ-AL0ACu67jZwHkOEMxwW6lsNn6VKzA9MUrBsdxAQiQ/viewform?embedded=true"
+            width="640"
+            height="1025"
+            className="border-none"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
+        );
+
+      case "software_development":
+        return (
+          <iframe
+            title="software_development"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeBPTjHlJ4CbdCe1CRk1xnVQEz6s_t0GV0JYMZqX2BIbDdfiw/viewform?embedded=true"
+            width="640"
+            height="1025"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
+        );
+
+      case "web_mobile_app_development":
+        return (
+          <iframe
+            title="web_mobile_app_development"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeWlQB6BX89ej3kAzZ24adxdXXSKSYGXE6xzjdyvmRnOho_Yg/viewform?embedded=true"
+            width="640"
+            height="1025"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
+        );
+
+      case "business_website_improvement":
+        return (
+          <iframe
+            title="business_website_improvement"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSekAlGkH-aHhgipCX1ajmDHqdUkoMm6OZsKo5dajuJoVh91SQ/viewform?embedded=true"
+            width="640"
+            height="1025"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
+        );
+
+      case "website_ui_ux_design":
+        return (
+          <iframe
+            title="website_ui_ux_design"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSe3u5yrwvD7ubcHiizLsBaYqt3qGHAGCwkLRQNwKmuCAgPsKA/viewform?embedded=true"
+            width="640"
+            height="1025"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
+        );
+
+      case "seo_improvement":
+        return (
+          <iframe
+            title="seo_improvement"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSefufGU4rSKBbVYoNSSOBZLNvq3vsodtAJuHgqljK5brWJcgQ/viewform?embedded=true"
+            width="640"
+            height="1025"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
+        );
+
+      case "maintenance_support":
+        return (
+          <iframe
+            title="maintenance_support"
+            src="https://docs.google.com/forms/d/e/1FAIpQLScWMHEsKfA3pGTiiss6hIvmWaFNZ0LCnn0-oQtiDHNNsPq_Ow/viewform?embedded=true"
+            width="640"
+            height="1025"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
+        );
+
+      case "cms_website_development":
+        return (
+          <iframe
+            title="cms_website_development"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSekAlGkH-aHhgipCX1ajmDHqdUkoMm6OZsKo5dajuJoVh91SQ/viewform?embedded=true"
+            width="640"
+            height="1025"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
+        );
+
+      case "e-commerce_website_development":
+        return (
+          <iframe
+            title="e-commerce_website_development"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeW9iagobAYVV8aifKZ7BacbSOSZAHfwfkdn6ncGE2ZKtnyXQ/viewform?embedded=true"
+            width="640"
+            height="1025"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
+        );
+
+      case "blogging_website_development":
+        return (
+          <iframe
+            title="blogging_website_development"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdqt8Av-VxmK1vq0W8BfFQUUUd-y14I-DmcDsYTjiQJ5nTgHw/viewform?embedded=true"
+            width="700"
+            height="520"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
+        );
+      default:
+        break;
+    }
+  }
+
   switch (category) {
     case "api_development_integration":
       keyFeature = [
@@ -1863,7 +2020,10 @@ function WebDevelopmentCategory() {
 
       <Stacks stackItems={stackItems} />
 
-      <ContactUs purposes={purposes} />
+      {/* <ContactUs purposes={purposes} /> */}
+      <div className="flex justify-center items-center mb-4 min-h-screen">
+        {displayContactForm()}
+      </div>
     </div>
   );
 }

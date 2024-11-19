@@ -1,0 +1,21 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Handle React Router Paths
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.html [L]
+
+# Optional: Force HTTPS (if required)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Optional: Set cache expiration for static assets
+<FilesMatch "\.(jpg|jpeg|png|gif|svg|js|css|woff|woff2|tff|eot|otf|webp)$">
+  ExpiresActive On
+  ExpiresDefault "access plus 1 year"
+  Header set Cache-Control "public, must-revalidate"
+</FilesMatch>
+
+# Optional: Prevent directory listing
+Options -Indexes

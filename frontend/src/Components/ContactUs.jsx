@@ -41,13 +41,17 @@ export default function ContactUs({ purposes }) {
     try {
       await axios.post(
         `${process.env.REACT_APP_BACKEND_URL}/users/contact_us`,
-        formData
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
       );
       setLoading(false);
       let prevIsFilledContactForm = JSON.parse(
-        localStorage.get("isFilledContactForm")
+        localStorage.getItem("isFilledContactForm")
       );
-
       localStorage.setItem("isFilledContactForm", JSON.stringify(true));
       toast.success(
         "Thank you! Your message has been successfully submitted. We will get back to you shortly."
@@ -61,7 +65,7 @@ export default function ContactUs({ purposes }) {
         terms: false,
       });
       if (!prevIsFilledContactForm) {
-        navigate("/");
+        window.location.href = "/";
       }
     } catch (error) {
       console.log(error);
