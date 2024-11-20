@@ -25,22 +25,22 @@ export default function Portfolio() {
   return (
     <div>
       <Welcome />
-      {/* <Service projects={projects} /> */}
-
       {/* Category Filter */}
-      <div className="flex mt-3 justify-center mb-4 space-x-4">
+      <div className="mt-3 mb-4 text-center">
         {categories.map((category, index) => (
-          <button
-            key={index}
-            onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 rounded ${
-              selectedCategory === category
-                ? "bg-blue-500 text-white"
-                : "bg-gray-200 text-gray-800"
-            }`}
-          >
-            {category.replace(/_/g, " ")}
-          </button>
+          <React.Fragment key={index}>
+            <button
+              onClick={() => setSelectedCategory(category)}
+              className={`mx-2 bg-transparent border-none text-base cursor-pointer ${
+                selectedCategory === category
+                  ? "text-blue-500 font-bold"
+                  : "text-gray-800"
+              }`}
+            >
+              {category.replace(/_/g, " ")}
+            </button>
+            <span className="mx-1 text-gray-400">/</span>
+          </React.Fragment>
         ))}
       </div>
 

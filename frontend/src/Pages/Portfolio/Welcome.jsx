@@ -2,41 +2,32 @@ import React from "react";
 
 export default function Welcome() {
   return (
-    <div className="w-full h-[700px] md:h-screen bg-background2 bg-no-repeat flex flex-col items-center">
-      <div className="mt-32 md:mt-48 m-auto w-full md:w-3/5 h-auto flex flex-col items-start">
-        <h4
-          className="mb-3 mx-auto w-10/12 md:w-auto md:mx-0 text-black text-xl md:text-lg font-Poppins"
-          style={{ opacity: "1", transform: "none" }}
-        >
+    <div
+      className="w-full h-screen bg-background2 bg-no-repeat bg-cover flex items-center justify-center"
+      style={{
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
+      <div className="w-full max-w-4xl px-4 md:px-8 lg:px-10 text-center md:text-left">
+        <h4 className="text-lg md:text-xl text-black font-Poppins mb-3">
           Hi, there
         </h4>
-        <h1
-          className="text-5xl md:text-[100px] mx-auto w-10/12 md:w-auto md:mx-0 md:text-6xl font-Roboto font-bold text-blue-950"
-          style={{ opacity: "1", transform: "none" }}
-        >
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-Roboto font-bold text-blue-950 leading-tight">
           Digital Experts.
         </h1>
-        <h1
-          className="py-3 mx-auto md:mx-0 w-10/12 md:w-auto text-4xl md:text-5xl font-Roboto font-bold text-blue-900"
-          style={{ opacity: "1", transform: "none" }}
-        >
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-Roboto font-bold text-blue-900 mt-3 leading-tight">
           We Build Future Softwares
         </h1>
-        <div
-          className="mt-4 mx-auto md:mx-0 w-10/12 md:w-3/4 h-auto flex flex-col items-start"
-          style={{ opacity: "1", transform: "none" }}
-        >
-          <p className="text-black text-xl md:text-lg font-Nunito">
-            Hello! Thank you for your interest in our work. We're skilled
-            website developers with a proven track record in creating
-            responsive, user-friendly, and visually appealing websites tailored
-            to meet the unique needs of various businesses.
-          </p>
-        </div>
+        <p className="text-black text-base md:text-lg font-Nunito mt-6">
+          Hello! Thank you for your interest in our work. We're skilled website
+          developers with a proven track record in creating responsive,
+          user-friendly, and visually appealing websites tailored to meet the
+          unique needs of various businesses.
+        </p>
         <a
           href="/contact"
-          className="mt-10 ml-10 md:ml-0 text-lg text-black hover:text-white p-2 px-4 font-Raleway border border-black hover:bg-blue-950 rounded"
-          style={{ opacity: "1", transform: "none" }}
+          className="inline-block mt-8 px-6 py-3 text-lg text-black hover:text-white font-Raleway border border-black hover:bg-blue-950 rounded transition"
         >
           Contact Us
         </a>
