@@ -11,6 +11,7 @@ import Privacy from "../Pages/TermsAndPrivacy/Privacy";
 import WebDevelopmentCategory from "../Pages/WebDevelopment/WebDevelopmentCategory";
 import FAQ from "../Pages/QuesAndAns";
 import DigitalMarketingCategory from "../Pages/DigitalMarketing/DigitalMarketingCategory";
+import NotFound from "../Pages/NotFound";
 
 export default function RouthPaths() {
   return (
@@ -32,6 +33,7 @@ export default function RouthPaths() {
       <Route path="/terms" element={<Terms />} />
       <Route path="/privacy-policy" element={<Privacy />} />
       <Route path="/faq" element={<FAQ />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
