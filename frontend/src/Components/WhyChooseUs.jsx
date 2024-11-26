@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
   const totalRows = Math.ceil(reasons.length / columnCount); // Total rows based on reasons count and column count
   const gridHeight = isMobile
     ? totalRows * rowHeight + 20 // Adjust grid height dynamically on mobile
-    : 900; // Fixed height for larger screens
+    : 500; // Fixed height for larger screens
 
   const Cell = ({ columnIndex, rowIndex, style }) => {
     const index = rowIndex * columnCount + columnIndex;

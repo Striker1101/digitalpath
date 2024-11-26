@@ -53,8 +53,8 @@ export default function ServicesSection() {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   // Grid column counts for web services
-  const webColumns = isLaptop ? 5 : isTablet ? 3 : 2;
-  const webColumnWidth = isLaptop ? 300 : isTablet ? 260 : 150;
+  const webColumns = isLaptop ? 4 : isTablet ? 3 : 2;
+  const webColumnWidth = isLaptop ? 280 : isTablet ? 240 : 150;
   const webRowHeight = 150;
 
   // Grid column counts for digital services
