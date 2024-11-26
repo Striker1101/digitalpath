@@ -26,7 +26,7 @@ export default function Welcome() {
           unique needs of various businesses.
         </p>
         <a
-          href="/contact"
+          href="/contact-us"
           className="inline-block mt-8 px-6 py-3 text-lg text-black hover:text-white font-Raleway border border-black hover:bg-blue-950 rounded transition"
         >
           Contact Us

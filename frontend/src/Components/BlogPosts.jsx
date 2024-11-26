@@ -1,48 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-} from "swiper/modules";
-import blog_thump from "../Assets/images/blog_thumb.png";
-const blogPosts = [
-  {
-    title: "Tips for Building a Successful E-commerce Site",
-    image: blog_thump,
-  },
-  {
-    title: "Understanding Fullstack Development",
-    image: blog_thump,
-  },
-  {
-    title: "Top 10 Digital Marketing Strategies",
-    image: blog_thump,
-  },
-  {
-    title: "How to Boost Your Website Traffic",
-    image: blog_thump,
-  },
-  { title: "SEO Basics for Beginners", image: blog_thump },
-  {
-    title: "The Importance of Responsive Design",
-    image: blog_thump,
-  },
-  { title: "Email Marketing Best Practices", image: blog_thump },
-  {
-    title: "Content Marketing Trends in 2024",
-    image: blog_thump,
-  },
-  { title: "Understanding Google Analytics", image: blog_thump },
-  {
-    title: "Creating Engaging Social Media Content",
-    image: blog_thump,
-  },
-];
+import { Pagination, Autoplay } from "swiper/modules";
+import { DataContext } from "../store";
 
 export default function BlogPosts() {
+  const { blogPosts } = useContext(DataContext);
   return (
     <div className="overflow-hidden py-8 md:py-20 bg-gray-100">
       <div className="mx-auto w-5/6 md:w-full py-8">

@@ -1,4 +1,6 @@
 import React from "react";
+import { FixedSizeGrid as Grid } from "react-window";
+import { useMediaQuery } from "react-responsive"; // Import react-responsive
 
 export default function WhyChooseUs() {
   const reasons = [
@@ -28,30 +30,53 @@ export default function WhyChooseUs() {
     },
   ];
 
-  return (
-    <div id="why-choose-us" className="mx-auto px-14 py-24 bg-background2">
-      <h2 className="text-3xl text-black font-Nunito font-bold text-center mb-12">
-        Why Choose Us
-      </h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {reasons.map((reason, index) => (
-          <div
-            key={index}
-            className="bg-white border p-6 rounded-lg shadow-lg text-center"
-          >
-            <h4 className="text-xl text-black font-Raleway font-semibold mt-4">
-              {reason.title}
-            </h4>
-            <p className="mt-2 text-lg text-gray-900">{reason.description}</p>
-            <a
-              href="/#contact"
-              className="w-1/2 mx-auto mt-6 py-2 text-sm text-gray-900 rounded border border-primary block hover:bg-primary hover:text-orange-300 transition duration-200 ease-in-out"
-            >
-              Contact us
-            </a>
-          </div>
-        ))}
+  // Use media queries to change column count based on screen size
+  const isMobile = useMediaQuery({ maxWidth: 767 }); // Mobile screens
+  const columnCount = isMobile ? 1 : 3; // 1 column on mobile, 3 columns on larger screens
+
+  const rowHeight = 250; // Fixed height for each row
+  const columnWidth = 300; // Fixed width for each column
+  const totalRows = Math.ceil(reasons.length / columnCount); // Total rows based on reasons count and column count
+  const gridHeight = isMobile
+    ? totalRows * rowHeight + 20 // Adjust grid height dynamically on mobile
+    : 900; // Fixed height for larger screens
+
+  const Cell = ({ columnIndex, rowIndex, style }) => {
+    const index = rowIndex * columnCount + columnIndex;
+    if (index >= reasons.length) return null; // Don't render empty cells
+
+    const reason = reasons[index];
+
+    return (
+      <div
+        style={style}
+        className="p-4 flex flex-col justify-between bg-white border rounded-lg shadow-md text-center"
+      >
+        <h4 className="text-xl font-bold text-gray-800">{reason.title}</h4>
+        <p className="text-sm text-gray-600 mt-2">{reason.description}</p>
+        <a
+          href="/#contact-us"
+          className="mt-4 py-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-secondary transition"
+        >
+          Contact Us
+        </a>
       </div>
+    );
+  };
+
+  return (
+    <div className="flex justify-center items-center py-10 min-h-screen">
+      <Grid
+        columnCount={columnCount} // Dynamically set the column count
+        rowCount={totalRows} // Adjust the row count based on column count
+        columnWidth={columnWidth}
+        rowHeight={rowHeight}
+        width={isMobile ? columnWidth + 40 : 900} // Adjust grid width for mobile screens
+        height={gridHeight} // Dynamically adjust height for mobile screens
+        className="gap-4"
+      >
+        {Cell}
+      </Grid>
     </div>
   );
 }

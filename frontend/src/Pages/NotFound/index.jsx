@@ -1,16 +1,22 @@
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function NotFound() {
+  const location = useLocation();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate("/");
-    }, 300000); // Redirect after 5 minutes
+  // Optional: Redirect to home after a delay
+  React.useEffect(() => {
+    // Set the 404 status using the browser history API
+    if (typeof window !== "undefined") {
+      document.title = "404 - Page Not Found";
+      // Optionally use history.replaceState to mimic 404
+      window.history.replaceState(null, "", location.pathname);
+    }
 
-    return () => clearTimeout(timer); // Cleanup on unmount
-  }, [navigate]);
+    const timeout = setTimeout(() => navigate("/"), 5000); // Redirect after 5 seconds
+    return () => clearTimeout(timeout); // Cleanup timeout
+  }, [location.pathname, navigate]);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-gray-100 to-gray-300">

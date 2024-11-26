@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import HeroSection from "../../Components/HeroSection";
 import ServicesOverview from "../../Components/ServicesOverview";
 import WhyChooseUs from "./WhyChooseUs";
@@ -13,18 +13,6 @@ import bg4 from "../../Assets/images/Web/bg/bg4.jpg";
 import bg5 from "../../Assets/images/Web/bg/bg5.jpeg";
 import FloatingChatWidget from "../../Components/FloatingChatWidget";
 //service
-import {
-  faPlug,
-  faCode,
-  faMobileAlt,
-  faBriefcase,
-  faPencilRuler,
-  faSearch,
-  faTools,
-  faServer,
-  faShoppingCart,
-  faBlog,
-} from "@fortawesome/free-solid-svg-icons";
 import Stacks from "../../Components/Stacks";
 
 import nextjs from "../../Assets/images/nextjs.png";
@@ -34,6 +22,7 @@ import download from "../../Assets/images/download.jpeg";
 import nestjs from "../../Assets/images/nestjs.png";
 import Testimony from "../../Components/Testimony";
 import { useNavigate } from "react-router-dom";
+import { DataContext } from "../../store";
 
 const stackItems = [
   { src: nextjs, alt: "Partner Logo 1" },
@@ -41,59 +30,6 @@ const stackItems = [
   { src: mysql, alt: "Partner Logo 3" },
   { src: download, alt: "Partner Logo 4" },
   { src: nestjs, alt: "Partner Logo 5" },
-];
-
-const services = [
-  {
-    name: "API Development and Integration",
-    link: "/web-development/api_development_integration",
-    icon: faPlug,
-  },
-  {
-    name: "Software Development",
-    link: "/web-development/software_development",
-    icon: faCode,
-  },
-  {
-    name: "Web & Mobile App Development",
-    link: "/web-development/web_mobile_app_development",
-    icon: faMobileAlt,
-  },
-  {
-    name: "Business Website Development",
-    link: "/web-development/business_website_improvement",
-    icon: faBriefcase,
-  },
-  {
-    name: "Website UI/UX Design & Development",
-    link: "/web-development/website_ui_ux_design",
-    icon: faPencilRuler,
-  },
-  {
-    name: "SEO Improvement",
-    link: "/web-development/seo_improvement",
-    icon: faSearch,
-  },
-  {
-    name: "Maintenance and Support",
-    link: "/web-development/maintenance_support",
-    icon: faTools,
-  },
-  {
-    name: "CMS Website Development",
-    link: "/web-development/cms_website_development",
-    icon: faServer,
-  },
-  {
-    name: "E-commerce Website Development",
-    link: "/web-development/e-commerce_website_development",
-    icon: faShoppingCart,
-  },
-  {
-    name: "Blogging Website Development",
-    link: "/web-development/blogging_website_development",
-    icon: faBlog,
-  },
 ];
 
 const reasons = [
@@ -143,6 +79,7 @@ const purposes = [" Website Development", "Consultation", "General Inquiry"];
 
 export default function WebDevelopment() {
   const navigate = useNavigate();
+  const { webServices } = useContext(DataContext);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -189,7 +126,7 @@ export default function WebDevelopment() {
       />
       <FloatingChatWidget />
       <ServicesOverview
-        services={services}
+        services={webServices}
         title={"Our Services"}
         desc={
           "Discover a variety of professional services designed to elevate your digital presence and streamline your business operations."

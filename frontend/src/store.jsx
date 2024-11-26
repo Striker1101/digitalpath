@@ -13,6 +13,20 @@ import tara1 from "./Assets/images/Web/tara1.png";
 import tara2 from "./Assets/images/Web/tara2.png";
 import tara3 from "./Assets/images/Web/tara3.png";
 import tara4 from "./Assets/images/Web/tara4.png";
+import blog_thump from "./Assets/images/blog_thumb.png";
+import {
+  faPlug,
+  faCode,
+  faMobileAlt,
+  faBriefcase,
+  faPencilRuler,
+  faSearch,
+  faTools,
+  faServer,
+  faShoppingCart,
+  faBlog,
+} from "@fortawesome/free-solid-svg-icons";
+
 // 1. Create the context
 export const DataContext = createContext();
 
@@ -100,9 +114,132 @@ export const DataProvider = ({ children }) => {
       images: [],
     },
   ];
+
+  const webServices = [
+    {
+      name: "API Development and Integration",
+      link: "/web-development/api_development_integration",
+      icon: faPlug,
+    },
+    {
+      name: "Software Development",
+      link: "/web-development/software_development",
+      icon: faCode,
+    },
+    {
+      name: "Web & Mobile App Development",
+      link: "/web-development/web_mobile_app_development",
+      icon: faMobileAlt,
+    },
+    {
+      name: "Business Website Development",
+      link: "/web-development/business_website_improvement",
+      icon: faBriefcase,
+    },
+    {
+      name: "Website UI/UX Design & Development",
+      link: "/web-development/website_ui_ux_design",
+      icon: faPencilRuler,
+    },
+    {
+      name: "SEO Improvement",
+      link: "/web-development/seo_improvement",
+      icon: faSearch,
+    },
+    {
+      name: "Maintenance and Support",
+      link: "/web-development/maintenance_support",
+      icon: faTools,
+    },
+    {
+      name: "CMS Website Development",
+      link: "/web-development/cms_website_development",
+      icon: faServer,
+    },
+    {
+      name: "E-commerce Website Development",
+      link: "/web-development/e-commerce_website_development",
+      icon: faShoppingCart,
+    },
+    {
+      name: "Blogging Website Development",
+      link: "/web-development/blogging_website_development",
+      icon: faBlog,
+    },
+  ];
+
+  const digitalServices = [
+    {
+      name: "Email Marketing",
+      link: "/digital-marketing/email_marketing",
+      icon: faPlug,
+    },
+    {
+      name: "Social Media Management",
+      link: "/digital-marketing/social_media_management",
+      icon: faCode,
+    },
+    {
+      name: "Content Marketing",
+      link: "/digital-marketing/content_marketing",
+      icon: faMobileAlt,
+    },
+    {
+      name: "Pay Per Click Advertising",
+      link: "/digital-marketing/pay_per_click_advertising",
+      icon: faBriefcase,
+    },
+    {
+      name: "Brand Management And Positioning",
+      link: "/digital-marketing/brand_management_and_positioning",
+      icon: faPencilRuler,
+    },
+    {
+      name: "Digital marketing consultation",
+      link: "/digital-marketing/digital_marketing_consultation",
+      icon: faSearch,
+    },
+  ];
+
+  const blogPosts = [
+    {
+      title: "Tips for Building a Successful E-commerce Site",
+      image: blog_thump,
+    },
+    {
+      title: "Understanding Fullstack Development",
+      image: blog_thump,
+    },
+    {
+      title: "Top 10 Digital Marketing Strategies",
+      image: blog_thump,
+    },
+    {
+      title: "How to Boost Your Website Traffic",
+      image: blog_thump,
+    },
+    { title: "SEO Basics for Beginners", image: blog_thump },
+    {
+      title: "The Importance of Responsive Design",
+      image: blog_thump,
+    },
+    { title: "Email Marketing Best Practices", image: blog_thump },
+    {
+      title: "Content Marketing Trends in 2024",
+      image: blog_thump,
+    },
+    { title: "Understanding Google Analytics", image: blog_thump },
+    {
+      title: "Creating Engaging Social Media Content",
+      image: blog_thump,
+    },
+  ];
+
   const [projects, setProjects] = useState(_projects);
   return (
-    <DataContext.Provider value={{ projects, setProjects }}>
+    <DataContext.Provider
+      value={{ projects, setProjects, webServices, digitalServices, blogPosts }}
+    >
       {children}
     </DataContext.Provider>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Welcome from "./Welcome";
 import Results from "./Results";
 import HeroSection from "../../Components/HeroSection";
@@ -24,41 +24,10 @@ import BlogPosts from "../../Components/BlogPosts";
 import Portfolio from "../../Components/Portfolio";
 import Testimony from "../../Components/Testimony";
 import ContactUs from "../../Components/ContactUs";
-
-const services = [
-  {
-    name: "Email Marketing",
-    link: "/digital-marketing/email_marketing",
-    icon: faPlug,
-  },
-  {
-    name: "Social Media Management",
-    link: "/digital-marketing/social_media_management",
-    icon: faCode,
-  },
-  {
-    name: "Content Marketing",
-    link: "/digital-marketing/content_marketing",
-    icon: faMobileAlt,
-  },
-  {
-    name: "Pay Per Click Advertising",
-    link: "/digital-marketing/pay_per_click_advertising",
-    icon: faBriefcase,
-  },
-  {
-    name: "Brand Management And Positioning",
-    link: "/digital-marketing/brand_management_and_positioning",
-    icon: faPencilRuler,
-  },
-  {
-    name: "Digital marketing consultation",
-    link: "/digital-marketing/digital_marketing_consultation",
-    icon: faSearch,
-  },
-];
+import { DataContext } from "../../store";
 
 export default function DigitalMarketing() {
+  const { digitalServices } = useContext(DataContext);
   return (
     <div>
       <HeroSection
@@ -76,7 +45,7 @@ export default function DigitalMarketing() {
       {/* <Welcome /> */}
 
       <ServicesOverview
-        services={services}
+        services={digitalServices}
         title={"Our Services"}
         desc={
           "Discover a variety of professional services designed to elevate your digital presence and streamline your business operations."
