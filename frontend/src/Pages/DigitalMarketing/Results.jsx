@@ -4,6 +4,7 @@ import seo_1_svgrepo_com from "../../Assets/images/seo-1-svgrepo-com.svg";
 import target_icon from "../../Assets/images/target_icon.svg";
 import email_alt2_svgrepo_com from "../../Assets/images/email-alt2-svgrepo-com.svg";
 import hashtag_svgrepo_com from "../../Assets/images/hashtag-svgrepo-com.svg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 export default function Results() {
   return (
     <div className="bg-[#c48925] text-white py-24 px-6 text-center">
@@ -42,7 +43,7 @@ export default function Results() {
             key={index}
             className="flex flex-col items-center p-6 bg-[#da9826] rounded-lg transform transition-transform hover:scale-105"
           >
-            <img src={item.imgSrc} alt="icon" className="w-20 h-20" />
+            <LazyLoadImage src={item.imgSrc} alt="icon" className="w-20 h-20" />
             <h3 className="text-xl font-Raleway font-semibold my-2">
               {item.title}
             </h3>

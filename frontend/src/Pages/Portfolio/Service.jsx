@@ -6,6 +6,7 @@ import service4 from "../../Assets/images/Services/4.jpg";
 import service5 from "../../Assets/images/Services/5.jpg";
 import endless_constellation from "../../Assets/images/endless-constellation.svg";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const services = [
   { id: 1, image: service1, path: "maintenance_and_seo_improvement" },
   { id: 2, image: service2, path: "business_website_improvement" },
@@ -33,7 +34,7 @@ export default function Service({ projects }) {
               key={service.id}
               className="mx-auto w-[400px] h-[260px] my-8 bg-[#ffffff] border border-slate-200 rounded-md shadow-lg hover:shadow-xl flex flex-col items-center transform transition-transform duration-300 hover:scale-105"
             >
-              <img
+              <LazyLoadImage
                 src={service.image}
                 alt=""
                 className="w-full h-[200px] object-cover rounded-t"

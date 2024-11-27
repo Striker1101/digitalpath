@@ -145,6 +145,7 @@ import mysql from "../../Assets/images/mysql.png";
 import download from "../../Assets/images/download.jpeg";
 import nestjs from "../../Assets/images/nestjs.png";
 import DigitalMarketingTestimony from "./DigitalMarketTestimony";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const stackItems = [
   { src: nextjs, alt: "Partner Logo 1" },
@@ -1331,7 +1332,7 @@ function DigitalMarketingCategory() {
           {filteredProjects.length > 0 ? (
             filteredProjects.map((project) => (
               <div key={project.id} className="border p-4 rounded shadow">
-                <img
+                <LazyLoadImage
                   src={project.image}
                   alt={project.name}
                   className="w-full h-48 object-cover rounded"

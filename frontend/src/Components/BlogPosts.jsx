@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { DataContext } from "../store";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function BlogPosts() {
   const { blogPosts } = useContext(DataContext);
@@ -28,7 +29,7 @@ export default function BlogPosts() {
           {blogPosts.map((post, index) => (
             <SwiperSlide key={index} className="px-4">
               <div className="mx-auto w-4/6 md:w-full py-8">
-                <img
+                <LazyLoadImage
                   src={post.image}
                   alt={post.title}
                   className="mx-auto w-full md:w-[340px] h-44 object-cover rounded-lg"

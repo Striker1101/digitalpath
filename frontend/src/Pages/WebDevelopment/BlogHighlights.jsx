@@ -3,6 +3,7 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import blog_thump from "../../Assets/images/blog_thumb.png";
 import Header from "../../Components/Header";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function BlogHighlights() {
   const blogPosts = [
@@ -51,7 +52,7 @@ export default function BlogHighlights() {
         {blogPosts.map((post, index) => (
           <SwiperSlide key={index}>
             <div className="blog-card mx-5 bg-white w-60 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-4 transform hover:scale-105">
-              <img
+              <LazyLoadImage
                 src={post.thumbnail}
                 alt={post.title}
                 className="w-full h-36 object-cover rounded-t-lg mb-4"

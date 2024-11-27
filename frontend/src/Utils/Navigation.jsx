@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../Assets/images/logo.png";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 export default function Navigation() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -46,7 +47,11 @@ export default function Navigation() {
       {/* Navbar */}
       <div className="fixed top-0 left-0 right-0 flex flex-row w-full h-auto px-4 py-4 items-center backdrop-blur-md bg-[#ffffff] border-b border-[#ffffff44] z-20">
         <a href="/" className="m-auto ml-2">
-          <img src={logo} alt="logo" className="w-12 h-12 object-cover" />
+          <LazyLoadImage
+            src={logo}
+            alt="logo"
+            className="w-12 h-12 object-cover"
+          />
         </a>
 
         {/* Main menu for large screens */}

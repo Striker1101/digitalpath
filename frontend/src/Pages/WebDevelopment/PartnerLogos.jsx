@@ -7,6 +7,7 @@ import partner2 from "../../Assets/images/client-logo/w2.png";
 import partner3 from "../../Assets/images/client-logo/w3.png";
 import partner4 from "../../Assets/images/client-logo/w4.png";
 import partner5 from "../../Assets/images/client-logo/w5.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function PartnerLogos() {
   // Define the logos data directly within the component
@@ -31,7 +32,7 @@ export default function PartnerLogos() {
         >
           {logos.map((logo, index) => (
             <SwiperSlide key={index}>
-              <img
+              <LazyLoadImage
                 src={logo}
                 alt={`Partner Logo ${index + 1}`}
                 className="w-24 h-24 object-contain"

@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../Assets/images/logo.png";
 import { Helmet } from "react-helmet-async";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 export default function AboutUs() {
   return (
     <div className="w-full h-full pb-4 pd:mb-36 py-5 md:py-20 px-0 md:px-20 lg:px-40 bg-background2 bg-center bg-cover bg-no-repeat flex flex-col ">
@@ -23,7 +24,8 @@ export default function AboutUs() {
       </Helmet> */}
       <div className="mt-20 px-6 md:px-20 pb-20 mx-auto w-11/12 md:w-full h-auto bg-white rounded-sm md:rounded-xl shadow-lg">
         {/* <div id="container-a0618b5519410189fd457cd33abb2e0d"></div> */}
-        <img
+
+        <LazyLoadImage
           src={logo}
           alt="company logo"
           className="my-12 mx-auto w-40 h-auto"

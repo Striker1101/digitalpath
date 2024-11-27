@@ -7,6 +7,7 @@ import x from "../Assets/images/x-social-media-logo-icon.svg";
 import tictok from "../Assets/images/tiktok-svgrepo-com.svg";
 import logo from "../Assets/images/logo.png";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Footer() {
   return (
@@ -16,7 +17,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12">
           {/* Logo and Title */}
           <div className="flex flex-col items-center md:items-start">
-            <img
+            <LazyLoadImage
               src={logo}
               alt="Digital Experts Logo"
               className="w-24 h-24 object-cover mb-4 transition-transform transform hover:scale-110"
@@ -111,42 +112,58 @@ export default function Footer() {
               aria-label="WhatsApp"
               className="opacity-80 hover:opacity-100 transform hover:scale-110 transition-all duration-300 ease-in-out"
             >
-              <img src={whatsapp} alt="WhatsApp" className="h-10 w-10" />
+              <LazyLoadImage
+                src={whatsapp}
+                alt="WhatsApp"
+                className="h-10 w-10"
+              />
             </a>
             <a
               href="https://www.facebook.com/Digitalexpertsng"
               aria-label="Facebook"
               className="opacity-80 hover:opacity-100 transform hover:scale-110 transition-all duration-300 ease-in-out"
             >
-              <img src={facebook} alt="Facebook" className="h-10 w-10" />
+              <LazyLoadImage
+                src={facebook}
+                alt="Facebook"
+                className="h-10 w-10"
+              />
             </a>
             <a
               href="https://www.linkedin.com/company/digitalexpertsng/"
               aria-label="LinkedIn"
               className="opacity-80 hover:opacity-100 transform hover:scale-110 transition-all duration-300 ease-in-out"
             >
-              <img src={linkinedin} alt="LinkedIn" className="h-10 w-10" />
+              <LazyLoadImage
+                src={linkinedin}
+                alt="LinkedIn"
+                className="h-10 w-10"
+              />
             </a>
             <a
               href="https://twitter.com/ProfitSplitAgc?s=09"
               aria-label="Twitter"
               className="opacity-80 hover:opacity-100 transform hover:scale-110 transition-all duration-300 ease-in-out"
             >
-              <img src={x} alt="Twitter" className="h-10 w-10" />
+              <LazyLoadImage src={x} alt="Twitter" className="h-10 w-10" />
             </a>
             <a
               href="https://www.instagram.com/digitalexperts_ng"
               aria-label="Instagram"
               className="opacity-80 hover:opacity-100 transform hover:scale-110 transition-all duration-300 ease-in-out"
             >
-              <img src={instagram} alt="Instagram" className="h-10 w-10" />
+              <LazyLoadImage
+                src={instagram}
+                alt="Instagram"
+                className="h-10 w-10"
+              />
             </a>
             <a
               href="https://tiktok.com/@digitalexperts_ng"
               aria-label="TikTok"
               className="opacity-80 hover:opacity-100 transform hover:scale-110 transition-all duration-300 ease-in-out"
             >
-              <img src={tictok} alt="TikTok" className="h-10 w-10" />
+              <LazyLoadImage src={tictok} alt="TikTok" className="h-10 w-10" />
             </a>
           </div>
         </div>

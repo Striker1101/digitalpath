@@ -1,5 +1,6 @@
 import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Projects({ projects }) {
   return (
@@ -11,7 +12,7 @@ export default function Projects({ projects }) {
             className="relative mx-auto w-10/12 md:w-[300px] h-[300px] bg-gray-100 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transform transition-transform duration-300 hover:scale-105"
           >
             {/* Image */}
-            <img
+            <LazyLoadImage
               src={project.image}
               alt={project.name}
               className="w-full h-full object-cover transition-opacity duration-300 hover:opacity-50"

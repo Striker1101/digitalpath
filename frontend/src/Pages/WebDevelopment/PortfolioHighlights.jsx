@@ -8,6 +8,7 @@ import cas_automobile_workshop from "../../Assets/images/cas-automobile-workshop
 import queen_catering_events from "../../Assets/images/queen-catering-events.png";
 import cisco_autos from "../../Assets/images/cisco-autos.png";
 import Header from "../../Components/Header";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function PortfolioHighlights() {
   const projects = [
@@ -74,7 +75,7 @@ export default function PortfolioHighlights() {
                 rel="noopener noreferrer"
                 className="block"
               >
-                <img
+                <LazyLoadImage
                   src={project.image}
                   alt={project.title}
                   className="w-full h-32 object-cover rounded mb-4"

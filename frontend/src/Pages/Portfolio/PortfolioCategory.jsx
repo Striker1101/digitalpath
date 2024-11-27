@@ -8,6 +8,7 @@ import mabella_cakes_catering from "../../Assets/images/mabella-cakes-catering.p
 import cisco_autos from "../../Assets/images/cisco-autos.png";
 import tuns_autotech from "../../Assets/images/tuns-autotech.png";
 import jericho_hospital from "../../Assets/images/jericho-hospital.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const projects = [
   {
@@ -103,7 +104,7 @@ function WebDevelopmentCategory() {
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project) => (
             <div key={project.id} className="border p-4 rounded shadow">
-              <img
+              <LazyLoadImage
                 src={project.image}
                 alt={project.name}
                 className="w-full h-48 object-cover rounded"

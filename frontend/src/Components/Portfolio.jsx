@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { DataContext } from "../store";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Portfolio() {
   const { projects } = useContext(DataContext);
@@ -29,7 +30,7 @@ export default function Portfolio() {
                 rel="noopener noreferrer"
                 className="block w-full"
               >
-                <img
+                <LazyLoadImage
                   src={project.image}
                   alt={project.title}
                   className="w-full h-52 object-cover rounded-lg"

@@ -3,6 +3,7 @@ import bg1 from "../../Assets/images/bg1.jpg";
 import bg2 from "../../Assets/images/bg_a.png";
 import bg3 from "../../Assets/images/liquid-cheese.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import {
   faCode,
   faWrench,
@@ -62,7 +63,7 @@ export default function Service() {
             Our Services
           </h2>
           <div className="relative flex mx-auto w-full h-[700px]">
-            <img
+            <LazyLoadImage
               src={currentImage}
               alt="Background "
               className="w-full h-auto object-cover transition-opacity duration-1000"
