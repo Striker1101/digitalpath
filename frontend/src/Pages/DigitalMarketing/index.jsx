@@ -1,6 +1,4 @@
 import React, { useContext } from "react";
-import Welcome from "./Welcome";
-import Results from "./Results";
 import HeroSection from "../../Components/HeroSection";
 import bg1 from "../../Assets/images/Digital_Marketing/bg1.jpeg";
 import bg2 from "../../Assets/images/Digital_Marketing/bg2.jpeg";
@@ -10,15 +8,6 @@ import bg5 from "../../Assets/images/Digital_Marketing/bg5.jpeg";
 import FloatingChatWidget from "../../Components/FloatingChatWidget";
 import ServicesOverview from "../../Components/ServicesOverview";
 
-//service
-import {
-  faPlug,
-  faCode,
-  faMobileAlt,
-  faBriefcase,
-  faPencilRuler,
-  faSearch,
-} from "@fortawesome/free-solid-svg-icons";
 import WhyChooseUs from "../../Components/WhyChooseUs";
 import BlogPosts from "../../Components/BlogPosts";
 import Portfolio from "../../Components/Portfolio";

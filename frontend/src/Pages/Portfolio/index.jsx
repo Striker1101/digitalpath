@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import Welcome from "./Welcome";
-import Service from "./Service";
 import Projects from "./Projects";
 import { DataContext } from "../../store";
 

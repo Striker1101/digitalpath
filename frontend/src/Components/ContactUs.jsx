@@ -4,14 +4,12 @@ import axios from "axios";
 import Header from "./Header";
 import { useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
 export default function ContactUs({ purposes }) {
   const location = useLocation();
 
   // Get the 'purpose' query parameter from the URL
   const queryParams = new URLSearchParams(location.search);
   const purposeFromQuery = queryParams.get("purpose");
-  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     purpose: purposeFromQuery || "",

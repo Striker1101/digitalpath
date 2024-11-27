@@ -4,7 +4,6 @@ import ServicesOverview from "../../Components/ServicesOverview";
 import WhyChooseUs from "./WhyChooseUs";
 import BlogHighlights from "./BlogHighlights";
 import PortfolioHighlights from "./PortfolioHighlights";
-import PartnerLogos from "./PartnerLogos";
 import ContactFormSection from "../../Components/ContactUs";
 import bg1 from "../../Assets/images/Web/bg/bg1.jpeg";
 import bg2 from "../../Assets/images/Web/bg/bg2.jpeg";

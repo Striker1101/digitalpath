@@ -9,7 +9,6 @@ import {
   faWrench,
   faShoppingCart,
   faServer,
-  faBolt,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
