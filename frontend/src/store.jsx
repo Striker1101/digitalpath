@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
 
 //project images
 import tara_grill_groove from "./Assets/images/tara-grill-groove.png";

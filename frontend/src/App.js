@@ -5,11 +5,8 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import ScrollToTop from "./Components/ScrollTop";
-import { useNavigate } from "react-router-dom";
 function App() {
   const location = useLocation();
-  const navigate = useNavigate();
-
   useEffect(() => {
     const handleHashLinkScroll = (event) => {
       // Only proceed if the target is a hash link
