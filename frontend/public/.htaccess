@@ -19,3 +19,8 @@ RewriteRule ^(.*)$ /index.html [L]
 
 # Optional: Prevent directory listing
 Options -Indexes
+
+# Enable Gzip/Brotli Compression - Ensure your server compresses JavaScript files.
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript
+</IfModule>
