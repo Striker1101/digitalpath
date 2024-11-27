@@ -1,39 +1,47 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import Homepage from "../Pages/HomePage";
-import Portfolio from "../Pages/Portfolio";
-import DigitalMarketing from "../Pages/DigitalMarketing";
-import WebDevelopment from "../Pages/WebDevelopment";
-import AboutUs from "../Pages/About";
-import ContactUs from "../Pages/Contact";
-import Terms from "../Pages/TermsAndPrivacy/Terms";
-import Privacy from "../Pages/TermsAndPrivacy/Privacy";
-import WebDevelopmentCategory from "../Pages/WebDevelopment/WebDevelopmentCategory";
-import FAQ from "../Pages/QuesAndAns";
-import DigitalMarketingCategory from "../Pages/DigitalMarketing/DigitalMarketingCategory";
-import NotFound from "../Pages/NotFound";
+
+// Lazy load pages
+const Homepage = lazy(() => import("../Pages/HomePage"));
+const Portfolio = lazy(() => import("../Pages/Portfolio"));
+const DigitalMarketing = lazy(() => import("../Pages/DigitalMarketing"));
+const WebDevelopment = lazy(() => import("../Pages/WebDevelopment"));
+const AboutUs = lazy(() => import("../Pages/About"));
+const ContactUs = lazy(() => import("../Pages/Contact"));
+const Terms = lazy(() => import("../Pages/TermsAndPrivacy/Terms"));
+const Privacy = lazy(() => import("../Pages/TermsAndPrivacy/Privacy"));
+const WebDevelopmentCategory = lazy(() =>
+  import("../Pages/WebDevelopment/WebDevelopmentCategory")
+);
+const FAQ = lazy(() => import("../Pages/QuesAndAns"));
+const DigitalMarketingCategory = lazy(() =>
+  import("../Pages/DigitalMarketing/DigitalMarketingCategory")
+);
+const NotFound = lazy(() => import("../Pages/NotFound"));
 
 export default function RouthPaths() {
   return (
-    <Routes>
-      <Route path="/" index element={<Homepage />} />
-      <Route path="/portfolio" element={<Portfolio />} />
-      <Route path="/digital-marketing" element={<DigitalMarketing />} />
-      <Route
-        path="/digital-marketing/:category"
-        element={<DigitalMarketingCategory />}
-      />
-      <Route path="/web-development" element={<WebDevelopment />} />
-      <Route
-        path="/web-development/:category"
-        element={<WebDevelopmentCategory />}
-      />
-      <Route path="/about-us" element={<AboutUs />} />
-      <Route path="/contact-us" element={<ContactUs />} />
-      <Route path="/terms" element={<Terms />} />
-      <Route path="/privacy-policy" element={<Privacy />} />
-      <Route path="/faq" element={<FAQ />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="/" index element={<Homepage />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/digital-marketing" element={<DigitalMarketing />} />
+        <Route
+          path="/digital-marketing/:category"
+          element={<DigitalMarketingCategory />}
+        />
+        <Route path="/web-development" element={<WebDevelopment />} />
+        <Route
+          path="/web-development/:category"
+          element={<WebDevelopmentCategory />}
+        />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Suspense>
   );
 }
