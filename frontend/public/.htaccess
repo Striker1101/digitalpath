@@ -11,16 +11,26 @@ RewriteRule ^(.*)$ /index.html [L]
 # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Optional: Set cache expiration for static assets
-<FilesMatch "\.(jpg|jpeg|png|gif|svg|js|css|woff|woff2|tff|eot|otf|webp)$">
-  ExpiresActive On
-  ExpiresDefault "access plus 1 year"
-  Header set Cache-Control "public, must-revalidate"
-</FilesMatch>
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 year"
+    <FilesMatch "\.(jpg|jpeg|png|gif|svg|js|css|woff|woff2|tff|eot|otf|webp)$">
+        Header set Cache-Control "public, must-revalidate"
+    </FilesMatch>
+</IfModule>
 
 # Optional: Prevent directory listing
 Options -Indexes
 
-# Enable Gzip/Brotli Compression - Ensure your server compresses JavaScript files.
+# Enable Gzip Compression
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript
 </IfModule>
+
+# Enable Brotli Compression (modern browsers)
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/javascript application/javascript
+</IfModule>
+
+# Custom 404 Error Page
+ErrorDocument 404 /404.html

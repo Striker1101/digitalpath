@@ -2,76 +2,41 @@ import React, { useEffect, useState } from "react";
 import bg1 from "../../Assets/images/bg1.jpg";
 import bg6 from "../../Assets/images/bg6.jpg";
 import bg2 from "../../Assets/images/bg2.jpg";
+
 export default function Welcome() {
-  const images = [bg1, bg6, bg2]; // Array of image sources
-  const [currentImage, setCurrentImage] = useState(images[0]); // Initial image
+  const images = [bg1, bg6, bg2];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
-    // Function to select a random image from the array
-    const changeImage = () => {
-      const randomImage = images[Math.floor(Math.random() * images.length)];
-      setCurrentImage(randomImage);
-    };
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 2000);
 
-    // Set an interval to change the image every 2 seconds
-    const interval = setInterval(changeImage, 2000);
-
-    // Cleanup interval on component unmount
     return () => clearInterval(interval);
-  }, []); // Empty dependency array to run once on mount
+  }, [images.length]);
 
   return (
     <div className="w-full bg-white pt-20">
       <div className="relative h-[100vh] w-full overflow-hidden">
         <div
-          className="absolute inset-0 transition-opacity duration-1000 ease-in-out back opacity-100"
+          className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
           style={{
-            backgroundImage: `url(${currentImage})`,
-            backgroundPosition: " center center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        ></div>
-        <div
-          className="absolute inset-0 transition-opacity duration-1000 ease-in-out back opacity-0"
-          style={{
-            backgroundImage: `url(${currentImage})`,
-            backgroundPosition: "center center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        ></div>
-        <div
-          className="absolute inset-0 transition-opacity duration-1000 ease-in-out back opacity-0"
-          style={{
-            backgroundImage: `url(${currentImage})`,
+            backgroundImage: `url(${images[currentImageIndex]})`,
             backgroundPosition: "center center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}
         ></div>
         <div className="absolute inset-0 bg-[#1f1d1da6] flex flex-col items-center text-white">
-          <div
-            className="mx-auto mt-44 w-11/12 md:w-[900px] h-auto flex flex-col items-center"
-            style={{ opacity: "1", transform: "none" }}
-          >
-            <h1
-              className="text-3xl md:text-6xl text-center font-Roboto font-bold"
-              style={{ opacity: "1", transform: "none" }}
-            >
+          <div className="mx-auto mt-44 w-11/12 md:w-[900px] h-auto flex flex-col items-center">
+            <h1 className="text-3xl md:text-6xl text-center font-Roboto font-bold">
               Elevate Your Online Presence
             </h1>
-            <p
-              className="text-lg md:text-2xl text-center mt-4"
-              style={{ opacity: "1", transform: "none" }}
-            >
+            <p className="text-lg md:text-2xl text-center mt-4">
               We specialize in Fullstack Development &amp; Digital Marketing
               Strategies for your business.
             </p>
-            <div
-              className="mt-12 md:mt-6"
-              style={{ opacity: "1", transform: "none" }}
-            >
+            <div className="mt-12 md:mt-6">
               <a
                 href="#services"
                 className="px-4 py-4 bg-primary hover:bg-opacity-90 transition-all font-bold text-[#f1f1f1] rounded mr-4"
