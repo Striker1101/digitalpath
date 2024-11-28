@@ -39,9 +39,9 @@ export default function WhyChooseUs() {
             key={index}
             className="bg-white border p-6 rounded-lg shadow-lg text-center"
           >
-            <h3 className="text-xl text-black font-Raleway font-semibold mt-4">
+            <p className="text-xl text-black font-Raleway font-semibold mt-4">
               {reason.title}
-            </h3>
+            </p>
             <p className="mt-2 text-lg text-gray-900">{reason.description}</p>
             <a
               href="/#contact"
