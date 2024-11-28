@@ -71,6 +71,7 @@ export default function Navigation() {
         <button
           className="ml-auto md:hidden text-[#381d0d] focus:outline-none"
           onClick={toggleSidebar}
+          aria-label="toggle side bar"
         >
           <svg
             stroke="currentColor"
@@ -99,7 +100,11 @@ export default function Navigation() {
         {/* Sidebar header with close button */}
         <div className="flex items-center justify-between p-4 border-b border-[#eeeeee]">
           <h2 className="text-lg font-bold text-[#381d0d]">Menu</h2>
-          <button onClick={closeSidebar} className="focus:outline-none">
+          <button
+            aria-label="current color"
+            onClick={closeSidebar}
+            className="focus:outline-none"
+          >
             <svg
               stroke="currentColor"
               fill="none"

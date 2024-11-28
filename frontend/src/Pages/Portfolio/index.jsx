@@ -29,6 +29,7 @@ export default function Portfolio() {
         {categories.map((category, index) => (
           <React.Fragment key={index}>
             <button
+              aria-label="select category"
               onClick={() => setSelectedCategory(category)}
               className={`mx-2 bg-transparent border-none text-base cursor-pointer ${
                 selectedCategory === category

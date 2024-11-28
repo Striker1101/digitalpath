@@ -201,6 +201,7 @@ export default function ContactUs({ purposes }) {
             <button
               type="submit"
               disabled={loading}
+              aria-label="submit form"
               className="w-full py-2 my-4 px-4 bg-green-500 text-white rounded hover:bg-green-700"
             >
               {loading ? "Sending..." : "Send Message"}

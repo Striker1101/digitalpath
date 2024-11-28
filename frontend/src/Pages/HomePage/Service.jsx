@@ -90,7 +90,10 @@ export default function Service() {
                 ))}
               </div>
               <Link to={"/web-development"}>
-                <button className="text-xl font-Raleway text-white hover:bg-white hover:text-black text-center my-10 p-3 px-6 border border-white rounded-full cursor-pointer transition duration-300 transform hover:scale-105">
+                <button
+                  aria-label="learn more"
+                  className="text-xl font-Raleway text-white hover:bg-white hover:text-black text-center my-10 p-3 px-6 border border-white rounded-full cursor-pointer transition duration-300 transform hover:scale-105"
+                >
                   Learn More
                 </button>
               </Link>

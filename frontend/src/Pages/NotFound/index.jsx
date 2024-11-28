@@ -45,6 +45,7 @@ export default function NotFound() {
       {/* Buttons */}
       <div className="mt-6">
         <button
+          aria-label="return to homepage"
           onClick={() => navigate("/")}
           className="px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg shadow-lg transition-all duration-300"
         >

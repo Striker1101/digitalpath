@@ -40,7 +40,7 @@ export default function HeroSection({
 
       {/* Content centered in the middle */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 space-y-6 px-4">
-        <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
+        <h1 className="text-4xl lg:text-6xl md:text-5xl font-extrabold leading-tight">
           {big_title}
         </h1>
         <p className="text-lg md:text-2xl font-light max-w-2xl">
