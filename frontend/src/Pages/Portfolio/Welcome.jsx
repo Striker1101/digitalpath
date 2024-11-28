@@ -10,15 +10,15 @@ export default function Welcome() {
       }}
     >
       <div className="w-full max-w-4xl px-4 md:px-8 lg:px-10 text-center md:text-left">
-        <h4 className="text-lg md:text-xl text-black font-Poppins mb-3">
+        <p className="text-lg md:text-xl text-black font-Poppins mb-3">
           Hi, there
-        </h4>
+        </p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-Roboto font-bold text-blue-950 leading-tight">
           Digital Experts.
         </h1>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-Roboto font-bold text-blue-900 mt-3 leading-tight">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-Roboto font-bold text-blue-900 mt-3 leading-tight">
           We Build Future Softwares
-        </h1>
+        </h2>
         <p className="text-black text-base md:text-lg font-Nunito mt-6">
           Hello! Thank you for your interest in our work. We're skilled website
           developers with a proven track record in creating responsive,
