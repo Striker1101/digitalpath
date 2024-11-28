@@ -6,13 +6,25 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { DataProvider } from "./store";
-import "./Assets/css/style.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import "react-toastify/dist/ReactToastify.css";
+
+// Dynamically load non-critical CSS
+const loadNonCriticalCSS = () => {
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = "./Assets/css/style.css";
+  link.type = "text/css";
+  link.onload = () => console.log("Non-critical CSS loaded");
+  document.head.appendChild(link);
+};
+
+// Call the function to load non-critical CSS
+loadNonCriticalCSS();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
