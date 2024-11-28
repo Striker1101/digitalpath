@@ -25,6 +25,7 @@ export default function Welcome() {
             backgroundPosition: "center center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
+            height: "100vh",
           }}
         ></div>
         <div className="absolute inset-0 bg-[#1f1d1da6] flex flex-col items-center text-white">
