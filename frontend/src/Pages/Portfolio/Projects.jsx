@@ -4,8 +4,8 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Projects({ projects }) {
   return (
-    <div className="w-full h-auto py-10">
-      <div className="w-full h-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div className="w-full h-auto ">
+      <div className="w-full h-auto my-10 grid grid-cols-1 md:grid-cols-2 gap-10">
         {projects.map((project) => (
           <div
             key={project.id}
@@ -34,7 +34,7 @@ export default function Projects({ projects }) {
               target="_blank"
               rel="noopener noreferrer"
               className="absolute bottom-4 right-4 w-10 h-10 bg-red-500 text-white flex justify-center items-center rounded-md transition-all duration-300 hover:scale-125"
-              title="Visit Site"
+              title={`Visit Site ${project.name}`}
               onMouseEnter={(e) =>
                 e.currentTarget.classList.add("animate-shake")
               }

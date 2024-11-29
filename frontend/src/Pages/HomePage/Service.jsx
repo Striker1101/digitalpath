@@ -23,7 +23,7 @@ function ServiceCard({ title, icon, link }) {
         className="mt-4 inline-block px-4 py-2 text-black bg-white rounded hover:bg-opacity-90 transition-all"
         href={link}
       >
-        Learn More
+        Learn More on {title}
       </a>
     </div>
   );
@@ -94,7 +94,7 @@ export default function Service() {
                   aria-label="learn more"
                   className="text-xl font-Raleway text-white hover:bg-white hover:text-black text-center my-10 p-3 px-6 border border-white rounded-full cursor-pointer transition duration-300 transform hover:scale-105"
                 >
-                  Learn More
+                  Learn More On Web Development
                 </button>
               </Link>
             </div>

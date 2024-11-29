@@ -18,7 +18,7 @@ export default function Highlight() {
               href="/web-development"
               className="px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark transition-all duration-300"
             >
-              Learn More
+              Learn More On Web Development
             </a>
           </div>
           <div className="flex flex-col justify-center items-start bg-white p-6 rounded-lg shadow-md">
@@ -33,7 +33,7 @@ export default function Highlight() {
               href="/digital-marketing"
               className="px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark transition-all duration-300"
             >
-              Learn More
+              Learn More On Digital Marketing
             </a>
           </div>
         </div>

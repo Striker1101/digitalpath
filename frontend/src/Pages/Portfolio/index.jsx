@@ -25,7 +25,7 @@ export default function Portfolio() {
     <div>
       <Welcome />
       {/* Category Filter */}
-      <div className="mt-3 mb-4 text-center">
+      <div className="mt-3  text-center">
         {categories.map((category, index) => (
           <React.Fragment key={index}>
             <button
