@@ -13,6 +13,17 @@
     <link rel="manifest" href="./manifest.json" />
     <title>Digital Path</title>
 
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+    default-src 'self'; 
+    script-src 'self'; 
+    style-src 'self' 'unsafe-inline'; 
+    img-src 'self' data:; 
+    object-src 'none';
+  "
+    />
+
     <!-- Preconnect external resources -->
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
