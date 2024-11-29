@@ -42,7 +42,7 @@ export default function Portfolio() {
                   href={project.link}
                   className="mt-2 px-4 py-1 bg-yellow-600 text-white rounded hover:bg-yellow-500 transition text-center w-full block"
                 >
-                  See More
+                  See More On {project.title}
                 </a>
               </a>
             </SwiperSlide>
