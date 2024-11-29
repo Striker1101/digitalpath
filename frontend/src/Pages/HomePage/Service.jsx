@@ -15,9 +15,7 @@ import { Link } from "react-router-dom";
 function ServiceCard({ title, icon, link }) {
   return (
     <div className="mx-auto w-[400px] bg-[#adadab3a] border p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
-      <span aria-label={title} className="text-4xl text-primary">
-        {icon}
-      </span>
+      <span className="text-4xl text-primary">{icon}</span>
       <h4 className="text-xl text-black font-semibold mt-4 mb-2">{title}</h4>
       <a
         className="mt-4 inline-block px-4 py-2 text-black bg-white rounded hover:bg-opacity-90 transition-all"
