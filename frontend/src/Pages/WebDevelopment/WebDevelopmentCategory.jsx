@@ -232,9 +232,9 @@ function WebDevelopmentCategory() {
             width="640"
             height="1025"
             className="border-none"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
           >
             Loading…
           </iframe>
@@ -247,9 +247,9 @@ function WebDevelopmentCategory() {
             src="https://docs.google.com/forms/d/e/1FAIpQLSeBPTjHlJ4CbdCe1CRk1xnVQEz6s_t0GV0JYMZqX2BIbDdfiw/viewform?embedded=true"
             width="640"
             height="1025"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
           >
             Loading…
           </iframe>
@@ -262,9 +262,9 @@ function WebDevelopmentCategory() {
             src="https://docs.google.com/forms/d/e/1FAIpQLSeWlQB6BX89ej3kAzZ24adxdXXSKSYGXE6xzjdyvmRnOho_Yg/viewform?embedded=true"
             width="640"
             height="1025"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
           >
             Loading…
           </iframe>
@@ -277,9 +277,9 @@ function WebDevelopmentCategory() {
             src="https://docs.google.com/forms/d/e/1FAIpQLSekAlGkH-aHhgipCX1ajmDHqdUkoMm6OZsKo5dajuJoVh91SQ/viewform?embedded=true"
             width="640"
             height="1025"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
           >
             Loading…
           </iframe>
@@ -292,9 +292,9 @@ function WebDevelopmentCategory() {
             src="https://docs.google.com/forms/d/e/1FAIpQLSe3u5yrwvD7ubcHiizLsBaYqt3qGHAGCwkLRQNwKmuCAgPsKA/viewform?embedded=true"
             width="640"
             height="1025"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
           >
             Loading…
           </iframe>
@@ -307,9 +307,9 @@ function WebDevelopmentCategory() {
             src="https://docs.google.com/forms/d/e/1FAIpQLSefufGU4rSKBbVYoNSSOBZLNvq3vsodtAJuHgqljK5brWJcgQ/viewform?embedded=true"
             width="640"
             height="1025"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
           >
             Loading…
           </iframe>
@@ -322,9 +322,9 @@ function WebDevelopmentCategory() {
             src="https://docs.google.com/forms/d/e/1FAIpQLScWMHEsKfA3pGTiiss6hIvmWaFNZ0LCnn0-oQtiDHNNsPq_Ow/viewform?embedded=true"
             width="640"
             height="1025"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
           >
             Loading…
           </iframe>
@@ -337,9 +337,9 @@ function WebDevelopmentCategory() {
             src="https://docs.google.com/forms/d/e/1FAIpQLSekAlGkH-aHhgipCX1ajmDHqdUkoMm6OZsKo5dajuJoVh91SQ/viewform?embedded=true"
             width="640"
             height="1025"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
           >
             Loading…
           </iframe>
@@ -352,9 +352,9 @@ function WebDevelopmentCategory() {
             src="https://docs.google.com/forms/d/e/1FAIpQLSeW9iagobAYVV8aifKZ7BacbSOSZAHfwfkdn6ncGE2ZKtnyXQ/viewform?embedded=true"
             width="640"
             height="1025"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
           >
             Loading…
           </iframe>
@@ -367,9 +367,9 @@ function WebDevelopmentCategory() {
             src="https://docs.google.com/forms/d/e/1FAIpQLSdqt8Av-VxmK1vq0W8BfFQUUUd-y14I-DmcDsYTjiQJ5nTgHw/viewform?embedded=true"
             width="700"
             height="520"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
           >
             Loading…
           </iframe>

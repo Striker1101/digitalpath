@@ -54,11 +54,11 @@ export default function Testimony({
             {testimonyData.map((testimony, index) => (
               <SwiperSlide key={index}>
                 <div className="bg-white p-4 rounded shadow">
-                  <p className="text-gray-900 italic">{`"${testimony.quote}"`}</p>
-                  <p className="mt-6 text-gray-800 font-semibold">
+                  <div className="text-gray-900 italic">{`"${testimony.quote}"`}</div>
+                  <div className="mt-6 text-gray-800 font-semibold">
                     {testimony.name}
-                  </p>
-                  <p className="text-gray-500">{testimony.company}</p>
+                  </div>
+                  <div className="text-gray-500">{testimony.company}</div>
                 </div>
               </SwiperSlide>
             ))}
@@ -70,18 +70,18 @@ export default function Testimony({
             <h3 className="text-xl font-Nunito font-bold">
               {first_text || " Completed Projects"} {percentage && "+"}
             </h3>
-            <p className="text-3xl">
+            <div className="text-3xl">
               {<CounterComponent defaultCount={first_number} />}
-            </p>
+            </div>
           </div>
 
           <div className="mx-auto md:mx-4 w-3/5 md:w-auto p-4 text-center rounded-md border-2 border-primary">
             <h3 className="text-xl font-Nunito font-bold">
               {second_text || "Happy Customers"} {percentage && "%"}
             </h3>
-            <p className="text-3xl">
+            <div className="text-3xl">
               {<CounterComponent defaultCount={second_number} />}
-            </p>
+            </div>
           </div>
         </div>
       </div>

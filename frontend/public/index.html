@@ -13,65 +13,65 @@
     <link rel="manifest" href="./manifest.json" />
     <title>Digital Path</title>
 
+    <!-- Content Security Policy (Relaxed for all scripts and resources) -->
     <meta
       http-equiv="Content-Security-Policy"
       content="
-    default-src 'self'; 
-    script-src 'self'; 
-    style-src 'self' 'unsafe-inline'; 
-    img-src 'self' data:; 
-    object-src 'none';
+    default-src * 'unsafe-inline' 'unsafe-eval';
+    script-src * 'unsafe-inline' 'unsafe-eval';
+    style-src * 'unsafe-inline';
+    img-src * data: https:;
+    connect-src *;
+    font-src * data:;
+    frame-src *;
   "
     />
 
-    <!-- Preconnect external resources -->
+    <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Optimize font loading -->
+    <!-- Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="preload"
-      href="https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
 
-    <!-- Combine Google Analytics and Conversion Tracking -->
-    <script defer src="./defer-analytics.js"></script>
-
-    <!-- Defer Google Tag Manager -->
-    <script>
-      window.addEventListener("load", function () {
-        (function (w, d, s, l, i) {
-          w[l] = w[l] || [];
-          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-          var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != "dataLayer" ? "&l=" + l : "";
-          j.defer = true;
-          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-          f.parentNode.insertBefore(j, f);
-        })(window, document, "script", "dataLayer", "GTM-5ZNMDMXP");
-      });
-    </script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <noscript
-      ><iframe
+    <!-- Google Tag Manager (noscript fallback) -->
+    <noscript>
+      <iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-5ZNMDMXP"
         height="0"
         width="0"
         style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
+      ></iframe>
+    </noscript>
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <div id="root"></div>
+
+    <!-- Google Tag Manager -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtm.js?id=GTM-5ZNMDMXP"
+    ></script>
+
+    <!-- jQuery Fallback -->
+    <script>
+      if (!window.jQuery) {
+        document.write(
+          '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"><\/script>'
+        );
+      }
+    </script>
+
+    <!-- Custom Scripts -->
+    <script src="./main.js"></script>
   </body>
 </html>

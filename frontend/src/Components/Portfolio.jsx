@@ -24,12 +24,7 @@ export default function Portfolio() {
         >
           {projects.map((project, index) => (
             <SwiperSlide key={index} className="px-2 my-6 w-full">
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full"
-              >
+              <div>
                 <LazyLoadImage
                   src={project.image}
                   alt={project.title}
@@ -40,11 +35,13 @@ export default function Portfolio() {
                 </h3>
                 <a
                   href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-2 px-4 py-1 bg-yellow-600 text-white rounded hover:bg-yellow-500 transition text-center w-full block"
                 >
                   See More On {project.title}
                 </a>
-              </a>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

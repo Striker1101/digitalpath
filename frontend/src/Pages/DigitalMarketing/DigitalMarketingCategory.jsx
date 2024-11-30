@@ -180,9 +180,9 @@ function DigitalMarketingCategory() {
             width="640"
             height="1025"
             className="border-none"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
           >
             Loading…
           </iframe>
@@ -195,9 +195,9 @@ function DigitalMarketingCategory() {
             src="https://docs.google.com/forms/d/e/1FAIpQLScJFUXeV684bWBSpqQoc_Q8vRHMCJBGqVZsuqSiuXesYyGQAw/viewform?embedded=true"
             width="640"
             height="1025"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
           >
             Loading…
           </iframe>
@@ -210,9 +210,9 @@ function DigitalMarketingCategory() {
             src="https://docs.google.com/forms/d/e/1FAIpQLSdRh-gfgIz-cEtQ6mxcF2_mTwjmxdD13rPv-azkUZU3p82qxA/viewform?embedded=true"
             width="640"
             height="1025"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
           >
             Loading…
           </iframe>
@@ -225,9 +225,9 @@ function DigitalMarketingCategory() {
             src="https://docs.google.com/forms/d/e/1FAIpQLScEgj1hNo1nkGj8twa6W9VciTzll6pLySsulEZKJhnx0GKnrQ/viewform?embedded=true"
             width="640"
             height="1025"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
           >
             Loading…
           </iframe>
@@ -240,9 +240,9 @@ function DigitalMarketingCategory() {
             src="https://docs.google.com/forms/d/e/1FAIpQLSe_llVloTPV-YQ0EkW2sN0pgYUDnSn1x0qNIn3_vX7Je6ploA/viewform?embedded=true"
             width="640"
             height="1025"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
           >
             Loading…
           </iframe>
@@ -255,9 +255,9 @@ function DigitalMarketingCategory() {
             src="https://docs.google.com/forms/d/e/1FAIpQLSenPy0u2xbO7_hZAAhmp6nP0Bu-vMzHTzpW2C3IdUcm0yzOlQ/viewform?embedded=true"
             width="640"
             height="1025"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
           >
             Loading…
           </iframe>

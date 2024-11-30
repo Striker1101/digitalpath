@@ -52,7 +52,7 @@ function CounterComponent({ defaultCount, defaultDuration = 2.5 }) {
 
   return (
     <div ref={counterRef}>
-      <p>{count}</p>
+      <div>{count}</div>
     </div>
   );
 }
